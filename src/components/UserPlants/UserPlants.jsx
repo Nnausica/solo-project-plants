@@ -17,7 +17,7 @@ function UserPlants(props) {
     dispatch({type: 'FETCH_PLANTS'})
   }, []);
 
-  const [heading, setHeading] = useState('Functional Component');
+  const [heading, setHeading] = useState('Plants');
 
   return (
     <div>

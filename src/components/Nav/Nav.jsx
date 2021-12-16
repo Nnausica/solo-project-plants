@@ -4,6 +4,7 @@ import LogOutButton from '../LogOutButton/LogOutButton';
 import './Nav.css';
 import { useSelector } from 'react-redux';
 
+
 function Nav() {
   const user = useSelector((store) => store.user);
 
@@ -30,6 +31,15 @@ function Nav() {
 
             <Link className="navLink" to="/info">
               Info Page
+            </Link>
+
+
+            <Link className="navLink" to="/UserPlants">
+              My Plants
+            </Link>
+
+            <Link className="navLink" to="/AddPlant">
+              Add A Plant
             </Link>
 
             <LogOutButton className="navLink" />
