@@ -9,7 +9,7 @@ const router = express.Router();
 router.get('/', (req, res) => {
   // GET route code here
   console.log('in router.get plant');
-  const query = `SELECT * FROM plants`
+  const query = `SELECT * FROM plants;`
   pool.query(query)
   .then((result) =>{
     console.log('plants return data:', result.rows);

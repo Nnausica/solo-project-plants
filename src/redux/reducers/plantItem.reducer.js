@@ -1,6 +1,6 @@
-const plants = (state = [], action) =>{
+const plantItem = (state = {}, action) =>{
   switch (action.type){
-    case 'SET_PLANTS':
+    case 'SET_PLANT_ITEM':
       return action.payload;
     default:
       return state;
@@ -9,4 +9,4 @@ const plants = (state = [], action) =>{
 
 // user will be on the redux state at:
 // state.user
-export default plants;
+export default plantItem;

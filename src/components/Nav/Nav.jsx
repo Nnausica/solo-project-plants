@@ -33,8 +33,8 @@ function Nav() {
               Info Page
             </Link>
 
-
-            <Link className="navLink" to="/UserPlants">
+            {/* to= has to match the path laid out in app.js */}
+            <Link className="navLink" to="/plant">
               My Plants
             </Link>
 

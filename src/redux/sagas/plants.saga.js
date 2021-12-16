@@ -6,7 +6,6 @@ import { put, takeLatest } from 'redux-saga/effects';
   function* fetchPlants(){
     //get all plants from the DB or now
     //add code later to narrow down to just users plants
-
     try {
       const plants = yield axios.get('/api/plant');
       yield put( {type: 'SET_PLANTS', payload: plants.data});

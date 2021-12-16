@@ -21,6 +21,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import UserPlants from '../UserPlants/UserPlants';
 import AddPlant from '../AddPlant/AddPlant';
+import PlantDetail from '../PlantDetail/PlantDetail';
 
 import './App.css';
 
@@ -126,6 +127,14 @@ function App() {
             path="/AddPlant"
           >
             <AddPlant />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/PlantDetail"
+          >
+            <PlantDetail />
           </ProtectedRoute>
 
           {/* If none of the other routes matched, we will show a 404. */}
