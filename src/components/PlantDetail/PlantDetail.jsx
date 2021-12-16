@@ -17,8 +17,8 @@ function PlantDetail(props) {
     <div>
       <h2>{heading}</h2>
       <p>In Plant Details</p>
-      <p>{JSON.stringify(plantItem)}</p>
-      <p>{plantItem.id}</p>
+     
+      <p>{plantItem.name}</p>
     
     </div>
   );

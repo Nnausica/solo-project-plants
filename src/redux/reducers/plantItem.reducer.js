@@ -1,4 +1,4 @@
-const plantItem = (state = {}, action) =>{
+const plantItem = (state = [], action) =>{
   switch (action.type){
     case 'SET_PLANT_ITEM':
       return action.payload;

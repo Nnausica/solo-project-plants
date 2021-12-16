@@ -33,14 +33,28 @@ function UserPlants(props) {
             const setPlantDetail = ()=>{
               dispatch({
                   type: 'SET_PLANT_ITEM',
-                  payload:plant
+                  payload: {id: plant.id, 
+                            user_id: plant.user_id,
+                            name: plant.name, 
+                            description: plant.description,
+                            available: plant.available,
+                            requester_id: plant.requester_id,
+                          }
               });//end dispatch
           }//end const
 
           return(
             <div>
-              <Link to="/PlantDetail"><p>{plant.plant_name}</p></Link>
-              <p>{JSON.stringify(plant)}</p>
+              {/* <Link to="/PlantDetail"><p>{plant.plant_name}</p></Link>
+              <p>{JSON.stringify(plant)}</p> */}
+              
+              <div key={plant.id} >
+                            
+                            <h3>{plant.name} </h3>
+                            <h3> {plant.description} </h3>
+                            <Link to="/PlantDetail" ><button onClick={setPlantDetail}>'this button is extra'</button></Link>
+                        </div>
+                    );
               
             </div>
           )
