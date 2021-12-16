@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
   console.log('in addplant post:', req.body);
   const addPlantQuery = `INSERT INTO "plants" ("user_id", "plant_name", "description", "available") VALUES ($1, $2, $3, $4)`;
   values = [req.body.user_id, req.body.plant_name, req.body.description, req.body.available];
-  pool.queery( queryString, values).then( (results)=>{
+  pool.query( addPlantQuery, values).then( (results)=>{
     res.sendStatus( 200);
   }).catch( (err)=>{
     console.log( err);
