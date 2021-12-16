@@ -35,7 +35,7 @@ function UserPlants(props) {
                   type: 'SET_PLANT_ITEM',
                   payload: {id: plant.id, 
                             user_id: plant.user_id,
-                            name: plant.name, 
+                            name: plant.plant_name, 
                             description: plant.description,
                             available: plant.available,
                             requester_id: plant.requester_id,
