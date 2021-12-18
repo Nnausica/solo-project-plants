@@ -23,6 +23,7 @@ import UserPlants from '../UserPlants/UserPlants';
 import AddPlant from '../AddPlant/AddPlant';
 import PlantDetail from '../PlantDetail/PlantDetail';
 import PlantsForTrade from '../PlantsForTrade/PlantsForTrade';
+import MakeAvailable from '../MakeAvailable/MakeAvailable';
 
 import './App.css';
 
@@ -117,18 +118,28 @@ function App() {
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
-            path="/plant"
+            path="/AddPlant"
           >
-            <UserPlants />
+            <AddPlant />
           </ProtectedRoute>
 
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
-            path="/AddPlant"
+            path="/MakeAvailable"
           >
-            <AddPlant />
+            <MakeAvailable />
           </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/plant"
+          >
+            <UserPlants />
+          </ProtectedRoute>
+
+         
 
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage

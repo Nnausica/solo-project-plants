@@ -10,7 +10,7 @@ function PlantsForTrade(props) {
   // a default value of 'Functional Component'
   const dispatch = useDispatch();
   const store = useSelector((store) => store);
-  const [heading, setHeading] = useState('Functional Component');
+  const [heading, setHeading] = useState('Plants for Trade');
   
   const tradeplants = useSelector((store) => store.tradeplants);
   const user = useSelector((store)=> store.user);
@@ -22,7 +22,6 @@ function PlantsForTrade(props) {
   return (
     <div>
       <h2>{heading}</h2>
-      <p>Plants for Trade</p>
       <p>{JSON.stringify(tradeplants)}</p>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {useSelector} from 'react-redux';
 import { Link } from 'react-router-dom'; 
+import MakeAvailable from '../MakeAvailable/MakeAvailable';
 
 
 function PlantDetail(props) {
@@ -19,6 +20,7 @@ function PlantDetail(props) {
       <p>In Plant Details</p>
      <p>{JSON.stringify(plantItem)}</p>
       <p>{plantItem.name}</p>
+      <MakeAvailable/>
     
       <Link to="/plant"><button>Back to PLant List</button></Link>
     </div>

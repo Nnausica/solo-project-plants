@@ -24,7 +24,7 @@ router.get('/userplant', (req, res) => {
 
 router.get('/tradeplants', (req, res) => {
   // GET route code here
-  console.log('in router.get plant');
+  console.log('in trades router.get plant');
   const query = `SELECT * FROM plants WHERE available=true AND user_id<>${req.query.id};`
   pool.query(query)
   .then((result) =>{
@@ -45,6 +45,18 @@ router.post('/', (req, res) => {
   const addPlantQuery = `INSERT INTO "plants" ("user_id", "plant_name", "description", "available") VALUES ($1, $2, $3, $4)`;
   values = [req.body.user_id, req.body.plant_name, req.body.description, req.body.available];
   pool.query( addPlantQuery, values).then( (results)=>{
+    res.sendStatus( 200);
+  }).catch( (err)=>{
+    console.log( err);
+    res.send( 500);
+  })
+});
+
+router.put('/:id', (req, res) => {
+  console.log('in edit:', req.body);
+  const editPlantQuery = `UPDATE plants SET available=$1 WHERE id=$2;`;
+  const values = [req.query.available, req.query.id];
+  pool.query( editPlantQuery, values).then( (results)=>{
     res.sendStatus( 200);
   }).catch( (err)=>{
     console.log( err);

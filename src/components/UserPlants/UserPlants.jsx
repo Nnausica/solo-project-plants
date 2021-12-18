@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import {useSelector} from 'react-redux'; 
 import {useDispatch} from 'react-redux';
 import { Link } from 'react-router-dom'; 
+import MakeAvailable from '../MakeAvailable/MakeAvailable';
 
 
 
@@ -52,8 +53,9 @@ function UserPlants(props) {
               
               <div key={plant.id} >
                             
-                            <h3>{plant.name} </h3>
+                            <h3>{plant.plant_name} </h3>
                             <h3> {plant.description} </h3>
+                            <MakeAvailable/>
                             <Link to="/PlantDetail" ><button onClick={setPlantDetail}>'this button is extra'</button></Link>
                         </div>
                     );

@@ -10,7 +10,7 @@ import { put, takeLatest } from 'redux-saga/effects';
     try {
       // console.log('action', action.payload.user_id);
       const plants = yield axios.get('/api/plant/userplant', {params:{id:action.payload}});
-   
+   console.log(plants.data)
       yield put( {type: 'SET_PLANTS', payload: plants.data});
     } catch{
       console.log('get all plants error');
