@@ -3,11 +3,14 @@ import { put, takeLatest } from 'redux-saga/effects';
 
 // worker Saga: will be fired on "FETCH_USER" actions
 //generator function
-  function* fetchPlants(){
+  function* fetchPlants(action){
+    console.log('what are we getting here???', action.payload.id);
     //get all plants from the DB or now
     //add code later to narrow down to just users plants
     try {
-      const plants = yield axios.get('/api/plant');
+      // console.log('action', action.payload.user_id);
+      const plants = yield axios.get('/api/plant/userplant');
+   
       yield put( {type: 'SET_PLANTS', payload: plants.data});
     } catch{
       console.log('get all plants error');

@@ -15,10 +15,11 @@ function UserPlants(props) {
   const dispatch = useDispatch();
   const plants = useSelector((store) => store.plants);
   const plantItem = useSelector((store)=> store.plantItem);
+  const user = useSelector((store)=> store.user);
   const [heading, setHeading] = useState('My Plants');
 
   useEffect(()=>{ 
-    dispatch({type: 'FETCH_PLANTS'})
+    dispatch({type: 'FETCH_PLANTS', payload:{user:user.id}})
   }, []);
 
  

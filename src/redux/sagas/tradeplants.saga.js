@@ -7,21 +7,17 @@ import { put, takeLatest } from 'redux-saga/effects';
     //get all plants from the DB or now
     //add code later to narrow down to just users plants
     try {
-      const tradeplants = yield axios.get('/api/plant');
+      const tradeplants = yield axios.get('/api/plant/tradeplants');
       yield put( {type: 'SET_TRADE_PLANTS', payload: tradeplants.data});
     } catch{
-      console.log('get all trade plants error');
+      console.log('get TRADE plants error');
     }
   }
 
-// //watcher- root saga
-// function* rootsaga(){
-//   yeild takeEvery('FETCH_PLANTS', fetchUserPlants)
-// }
 
-//***** OMG is this the watcher? did i figure it out? these match.....
-function* plantsSaga() {
+//*** watcher ***
+function* tradeplantsSaga() {
   yield takeLatest('FETCH_TRADES', fetchTradePlants);
 }
 
-export default plantsSaga;
+export default tradeplantsSaga;

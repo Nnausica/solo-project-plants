@@ -1,4 +1,5 @@
 const express = require('express');
+const { actionChannel } = require('redux-saga/effects');
 const pool = require('../modules/pool');
 const router = express.Router();
 
@@ -6,13 +7,28 @@ const router = express.Router();
 /**
  * GET route template
  */
-router.get('/', (req, res) => {
+router.get('/userplant', (req, res) => {
   // GET route code here
-  console.log('in router.get plant');
-  const query = `SELECT * FROM plants;`
-  pool.query(query)
+  console.log('in router.get plant', req);
+  const query = `SELECT * FROM plants WHERE user_id=2;`
+  pool.query(query )
   .then((result) =>{
     console.log('plants return data:', result.rows);
+    res.send(result.rows)
+  })
+  .catch(err =>{
+    console.log('error in GET PLANTS router', err);
+    res.sendStatus(500)
+  })
+});
+
+router.get('/tradeplants', (req, res) => {
+  // GET route code here
+  console.log('in router.get plant');
+  const query = `SELECT * FROM plants WHERE available=true AND user_id=2;`
+  pool.query(query)
+  .then((result) =>{
+    console.log('trade plants return data:', result.rows);
     res.send(result.rows)
   })
   .catch(err =>{

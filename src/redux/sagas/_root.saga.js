@@ -4,6 +4,7 @@ import registrationSaga from './registration.saga';
 import userSaga from './user.saga';
 import plantsSaga from './plants.saga';
 import addplantSaga from './addplant.saga';
+import tradeplantsSaga from './tradeplants.saga';
 
 
 // rootSaga is the primary saga.
@@ -20,5 +21,6 @@ export default function* rootSaga() {
     userSaga(),
     plantsSaga(),
     addplantSaga(),
+    tradeplantsSaga(),
   ]);
 }
