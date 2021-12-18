@@ -42,6 +42,10 @@ function Nav() {
               Add A Plant
             </Link>
 
+            <Link className="navLink" to="/PlantsForTrade">
+              Plants for Trade
+            </Link>
+
             <LogOutButton className="navLink" />
           </>
         )}

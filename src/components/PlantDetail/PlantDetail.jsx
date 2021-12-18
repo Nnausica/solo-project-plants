@@ -20,6 +20,7 @@ function PlantDetail(props) {
      <p>{JSON.stringify(plantItem)}</p>
       <p>{plantItem.name}</p>
     
+      <Link to="/plant"><button>Back to PLant List</button></Link>
     </div>
   );
 }
