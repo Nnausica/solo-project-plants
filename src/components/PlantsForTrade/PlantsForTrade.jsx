@@ -16,7 +16,7 @@ function PlantsForTrade(props) {
   const user = useSelector((store)=> store.user);
 
   useEffect(()=>{ 
-    dispatch({type: 'FETCH_TRADES', payload:{user:user.id}})
+    dispatch({type: 'FETCH_TRADES', payload:user.id})
   }, []);
 
   return (

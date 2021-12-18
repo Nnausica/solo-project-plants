@@ -25,7 +25,7 @@ router.get('/userplant', (req, res) => {
 router.get('/tradeplants', (req, res) => {
   // GET route code here
   console.log('in router.get plant');
-  const query = `SELECT * FROM plants WHERE available=true AND user_id=2;`
+  const query = `SELECT * FROM plants WHERE available=true AND user_id<>${req.query.id};`
   pool.query(query)
   .then((result) =>{
     console.log('trade plants return data:', result.rows);
