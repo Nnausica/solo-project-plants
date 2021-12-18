@@ -9,8 +9,8 @@ const router = express.Router();
  */
 router.get('/userplant', (req, res) => {
   // GET route code here
-  console.log('in router.get plant', req);
-  const query = `SELECT * FROM plants WHERE user_id=2;`
+  console.log('in router.get plant', req.query);
+  const query = `SELECT * FROM plants WHERE user_id=${req.query.id};`
   pool.query(query )
   .then((result) =>{
     console.log('plants return data:', result.rows);

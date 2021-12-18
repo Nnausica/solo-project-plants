@@ -138,9 +138,17 @@ Customize this ReadMe and the code comments in this project to read less like a 
 ## Plants
 [x] create GET route for plants
 [x] create UserPlants page to test GET route
+[x] map through plants
 
-[ ] create POST route
-[ ] create Add Plant component
+## Add Plants
+[x] create POST route
+[x] create Add Plant components
+
+## Plant Details
+[x] map through plants
+[x] select plant by ID
+
+
 
 
 

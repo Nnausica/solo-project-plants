@@ -19,7 +19,7 @@ function UserPlants(props) {
   const [heading, setHeading] = useState('My Plants');
 
   useEffect(()=>{ 
-    dispatch({type: 'FETCH_PLANTS', payload:{user:user.id}})
+    dispatch({type: 'FETCH_PLANTS', payload:user.id})
   }, []);
 
  
