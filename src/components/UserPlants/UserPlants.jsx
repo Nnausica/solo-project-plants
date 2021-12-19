@@ -3,20 +3,17 @@ import React, { useEffect, useState } from 'react';
 import {useSelector} from 'react-redux'; 
 import {useDispatch} from 'react-redux';
 import { Link } from 'react-router-dom'; 
-import MakeAvailable from '../MakeAvailable/MakeAvailable';
 
 
-
-// Basic functional component structure for React with default state
-// value setup. When making a new component be sure to replace the
-// component name UserPlants with the name for the new component.
 function UserPlants(props) {
   // Using hooks we're creating local state for a "heading" variable with
   // a default value of 'Functional Component'
   const dispatch = useDispatch();
+
   const plants = useSelector((store) => store.plants);
   const plantItem = useSelector((store)=> store.plantItem);
   const user = useSelector((store)=> store.user);
+
   const [heading, setHeading] = useState('My Plants');
 
   useEffect(()=>{ 
@@ -55,7 +52,6 @@ function UserPlants(props) {
                             
                             <h3>{plant.plant_name} </h3>
                             <h3> {plant.description} </h3>
-                            <MakeAvailable/>
                             <Link to="/PlantDetail" ><button onClick={setPlantDetail}>'this button is extra'</button></Link>
                         </div>
                     );

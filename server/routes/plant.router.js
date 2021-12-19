@@ -24,15 +24,15 @@ router.get('/userplant', (req, res) => {
 
 router.get('/tradeplants', (req, res) => {
   // GET route code here
-  console.log('in trades router.get plant:');
-  const query = `SELECT * FROM plants WHERE available=true AND user_id<>${req.query.id};`
+  console.log('in trades router- whats the query:');
+  const query = `SELECT * FROM plants WHERE available=true AND user_id<>${req.query};`
   pool.query(query)
   .then((result) =>{
     console.log('trade plants return data:', result.rows);
     res.send(result.rows)
   })
   .catch(err =>{
-    console.log('error in GET PLANTS router', err);
+    console.log('error in GET trade PLANTS router', err);
     res.sendStatus(500)
   })
 });

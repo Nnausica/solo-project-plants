@@ -1,28 +1,21 @@
 import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
-// worker Saga: will be fired on "FETCH_USER" actions
 //generator function
+//fetch all plants from the database that have a user_id that matches the active users id
   function* fetchPlants(action){
-    console.log('what are we getting here???', action.payload.id);
-    //get all plants from the DB or now
-    //add code later to narrow down to just users plants
+   
+
     try {
-      // console.log('action', action.payload.user_id);
       const plants = yield axios.get('/api/plant/userplant', {params:{id:action.payload}});
-   console.log(plants.data)
+      console.log('plants.data', plants.data);
       yield put( {type: 'SET_PLANTS', payload: plants.data});
     } catch{
       console.log('get all plants error');
     }
   }
 
-// //watcher- root saga
-// function* rootsaga(){
-//   yeild takeEvery('FETCH_PLANTS', fetchUserPlants)
-// }
-
-//***** OMG is this the watcher? did i figure it out? these match.....
+//*** watcher ***
 function* plantsSaga() {
   yield takeLatest('FETCH_PLANTS', fetchPlants);
 }
