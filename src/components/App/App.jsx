@@ -25,6 +25,7 @@ import PlantDetail from '../PlantDetail/PlantDetail';
 import PlantsForTrade from '../PlantsForTrade/PlantsForTrade';
 import MakeAvailable from '../MakeAvailable/MakeAvailable';
 import TradePlantDetail from '../TradePlantDetail/TradePlantDetail';
+import OfferATrade from '../OfferATrade/OfferATrade';
 
 import './App.css';
 
@@ -135,12 +136,18 @@ function App() {
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
+            path="/OfferATrade"
+          >
+            <OfferATrade />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
             path="/plant"
           >
             <UserPlants />
           </ProtectedRoute>
-
-         
 
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
