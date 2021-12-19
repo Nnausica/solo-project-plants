@@ -1,15 +1,21 @@
 import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
-// worker Saga: will be fired on "FETCH_USER" actions
+
 //generator function
   function* editPlantAvailability(action){
 
     try {
-      const editplant = yield axios.put(`/api/plant/${action.payload.id}`, {payload:action.payload.available});
       console.log('action.payload', action.payload);
+      const plant = yield axios({
+                              method: 'PUT',
+                              url:'api/plant',
+                              data: action.payload});
+      
 
+      console.log("payload:plant.data", payload);
       yield put( {type: 'SET_NEW_AVAILABILITY', payload: plant.data});
+     
       
     } catch{
       console.log('get TRADE plants error');
@@ -19,6 +25,7 @@ import { put, takeLatest } from 'redux-saga/effects';
 
 //*** watcher ***
 function* editavailabilitySaga() {
+  console.log("in edit watcher");
   yield takeLatest('EDIT_PLANT', editPlantAvailability);
 }
 

@@ -1,11 +1,10 @@
 import axios from 'axios';
 import { put, takeLatest } from 'redux-saga/effects';
 
-// worker Saga: will be fired on "FETCH_USER" actions
-//generator function
+
+//generator function capture plant info being added by the user
+//posts new plants to the database
   function* addPlants(action){
-    //get all plants from the DB or now
-    //add code later to narrow down to just users plants
 
     try {
       const plants = yield axios.post('/api/plant', action.payload);
@@ -15,12 +14,7 @@ import { put, takeLatest } from 'redux-saga/effects';
     }
   }
 
-// //watcher- root saga
-// function* rootsaga(){
-//   yeild takeEvery('FETCH_PLANTS', fetchUserPlants)
-// }
-
-//***** OMG is this the watcher? did i figure it out? these match.....
+// watcher
 function* addplantSaga() {
   yield takeLatest('ADD_NEWPLANT', addPlants);
 }

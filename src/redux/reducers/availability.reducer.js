@@ -1,4 +1,4 @@
-const availability = (state = [], action) =>{
+const availability = (state = (''), action) =>{
   switch (action.type){
     case 'SET_NEW_AVAILABILITY':
       return action.payload;

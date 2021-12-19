@@ -23,6 +23,6 @@ export default function* rootSaga() {
     plantsSaga(),
     addplantSaga(),
     tradeplantsSaga(),
-    editavailabilitySaga,
+    editavailabilitySaga(),
   ]);
 }

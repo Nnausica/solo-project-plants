@@ -8,11 +8,13 @@ function MakeAvailable(props) {
   // Using hooks we're creating local state for a "heading" variable with
   // a default value of 'Functional Component'
   const store = useSelector((store) => store);
+  const plantItem = useSelector((store) => store.plantItem);
+
   const [heading, setHeading] = useState('Functional Component');
   const dispatch = useDispatch();
 
-  const[newAvailability, setnewAvailability]= useState();
 
+  const[newAvailability, setnewAvailability]= useState();
 
   const changeAvailability = ()=>{
     console.log('in newAvailability');
@@ -21,7 +23,8 @@ function MakeAvailable(props) {
 
 const EditPlant = () => {
   // dispatch with NewPlant as the payload
-    dispatch( {type:'EDIT_PLANT', payload: {available: newAvailability, id:store.plantItem.id}} );
+    dispatch( {type:'EDIT_PLANT', payload: {available: newAvailability, id:plantItem.id}} );
+    console.log("dispatch payload", plantItem);
 }
 
   return (
@@ -31,6 +34,7 @@ const EditPlant = () => {
                 <option value="False">No</option>
               </select>
           <button onClick={EditPlant}>Make Availabile</button>
+          <p>{JSON.stringify(plantItem)}</p>
     </div>
   )
 }
