@@ -20,8 +20,6 @@ function UserPlants(props) {
     dispatch({type: 'FETCH_PLANTS', payload:user.id})
   }, []);
 
- 
-
   return (
     <div>
       <h2>{heading}</h2>

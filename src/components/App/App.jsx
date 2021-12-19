@@ -24,6 +24,7 @@ import AddPlant from '../AddPlant/AddPlant';
 import PlantDetail from '../PlantDetail/PlantDetail';
 import PlantsForTrade from '../PlantsForTrade/PlantsForTrade';
 import MakeAvailable from '../MakeAvailable/MakeAvailable';
+import TradePlantDetail from '../TradePlantDetail/TradePlantDetail';
 
 import './App.css';
 
@@ -155,6 +156,14 @@ function App() {
             path="/PlantsForTrade"
           >
             <PlantsForTrade />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/TradePlantDetail"
+          >
+            <TradePlantDetail />
           </ProtectedRoute>
 
           {/* If none of the other routes matched, we will show a 404. */}

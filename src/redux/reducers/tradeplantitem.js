@@ -1,4 +1,4 @@
-const tradeplantsitem = (state = [], action) =>{
+const tradeplantitem = (state = [], action) =>{
   switch (action.type){
     case 'SET_TRADEPLANT_ITEM':
       return action.payload;
@@ -9,4 +9,4 @@ const tradeplantsitem = (state = [], action) =>{
 
 // user will be on the redux state at:
 // state.user
-export default tradeplantsitem;
+export default tradeplantitem;

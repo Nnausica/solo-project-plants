@@ -145,10 +145,12 @@ Customize this ReadMe and the code comments in this project to read less like a 
 [x] create Add Plant components
 
 ## Plant Details
-[x] map through plants
+[x] map through plants, only pull plants owned by active user
 [x] select plant by ID
 
-
+## Plants for Trade Details
+[x] map through plants, only pull plants not owned by active user
+[x] select plant by ID
 
 
 
