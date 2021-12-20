@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {useSelector} from 'react-redux';
 import { Link } from 'react-router-dom'; 
-import OfferATrade from '../OfferATrade/OfferATrade';
+import OfferATradeButton from '../OfferATradeButton/OfferATradeButton';
 
 
 
@@ -23,7 +23,7 @@ function TradePlantDetail(props) {
       <p>{tradeplantitem.name}</p>
       <p>{tradeplantitem.description}</p>
 
-      <OfferATrade/>
+      <OfferATradeButton/>
 
     
       <Link to="/PlantsForTrade"><button>Back to Plants for Trade</button></Link>

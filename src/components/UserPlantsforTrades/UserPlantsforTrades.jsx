@@ -3,9 +3,10 @@ import React, { useEffect, useState } from 'react';
 import {useSelector} from 'react-redux'; 
 import {useDispatch} from 'react-redux';
 import { Link } from 'react-router-dom'; 
+import OfferTrade from '../OfferTrade/OfferTrade';
 
 
-function UserPlants(props) {
+function UserPlantsforTrades(props) {
   // Using hooks we're creating local state for a "heading" variable with
   // a default value of 'Functional Component'
   const dispatch = useDispatch();
@@ -45,7 +46,7 @@ function UserPlants(props) {
                             
                   <h3>{plant.plant_name} </h3>
                   <h3> {plant.description} </h3>
-                  <Link to="/PlantDetail" ><button onClick={setPlantDetail}>'View Plant Details'</button></Link>
+                  <OfferTrade/>
                 </div>
                     );
               
@@ -62,6 +63,6 @@ function UserPlants(props) {
    
     </div>
   ); //end return
-} //end userplants
+} //end UserPlantsforTrades
 
-export default UserPlants;
+export default UserPlantsforTrades;

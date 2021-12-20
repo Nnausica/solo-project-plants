@@ -1,10 +1,16 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from 'react-router-dom'; 
+import UserPlantsforTrades from '../UserPlantsforTrades/UserPlantsforTrades';
 
 
-function OfferATrade(props) {
+
+function OfferATradeButton(props) {
  
   const store = useSelector((store) => store);
+  const plantItem = useSelector((store) => store.plantItem);
+  
   const [heading, setHeading] = useState('');
   const dispatch = useDispatch();
 
@@ -22,6 +28,7 @@ function OfferATrade(props) {
         offerTrade?
         <span>
             <p>This will be the list of user plants</p>
+            <UserPlantsforTrades/>
             <button onClick={toggleOfferTrade}>JK Dont want to trade</button>
         </span>
         :
@@ -37,4 +44,4 @@ function OfferATrade(props) {
   )
 }
 
-export default OfferATrade;
+export default OfferATradeButton;

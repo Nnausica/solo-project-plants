@@ -25,7 +25,10 @@ import PlantDetail from '../PlantDetail/PlantDetail';
 import PlantsForTrade from '../PlantsForTrade/PlantsForTrade';
 import MakeAvailable from '../MakeAvailable/MakeAvailable';
 import TradePlantDetail from '../TradePlantDetail/TradePlantDetail';
-import OfferATrade from '../OfferATrade/OfferATrade';
+import OfferATradeButton from '../OfferATradeButton/OfferATradeButton';
+import TradePlants from '../TradePlants/TradePlants';
+import OfferTrade from '../OfferTrade/OfferTrade';
+import UserPlantsforTrades from '../UserPlantsforTrades/UserPlantsforTrades';
 
 import './App.css';
 
@@ -136,9 +139,17 @@ function App() {
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
-            path="/OfferATrade"
+            path="/OfferATradeButton"
           >
-            <OfferATrade />
+            <OfferATradeButton />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/OfferTrade"
+          >
+            <OfferTrade />
           </ProtectedRoute>
 
           <ProtectedRoute
@@ -168,9 +179,25 @@ function App() {
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
+            path="/TradePlants"
+          >
+            <TradePlants />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
             path="/TradePlantDetail"
           >
             <TradePlantDetail />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/UserPlantsforTrades"
+          >
+            <UserPlantsforTrades />
           </ProtectedRoute>
 
           {/* If none of the other routes matched, we will show a 404. */}

@@ -5,6 +5,7 @@ import {useDispatch} from 'react-redux';
 import { Link } from 'react-router-dom'; 
 
 
+
 function PlantsForTrade(props) {
   // Using hooks we're creating local state for a "heading" variable with
   // a default value of 'Functional Component'
@@ -25,7 +26,7 @@ function PlantsForTrade(props) {
   return (
     <div>
       <h2>{heading}</h2>
-      <p>{JSON.stringify(tradeplants)}</p>
+      {/* <p>{JSON.stringify(tradeplants)}</p> */}
 
       <section>
         {tradeplants.map( tradeplant => {
