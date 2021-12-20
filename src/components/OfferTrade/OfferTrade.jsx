@@ -10,6 +10,9 @@ function OfferTrade(props) {
   const store = useSelector((store) => store);
   const tradeplantitem = useSelector((store) => store.tradeplantitem);
   const plants = useSelector((store) => store.plants);
+  const plant = useSelector((store) => store.plant);
+  const user = useSelector((store) => store.user);
+
 
 
   const [heading, setHeading] = useState('');
@@ -17,12 +20,15 @@ function OfferTrade(props) {
 
 const OfferTrade = () => {
   // dispatch with NewPlant as the payload
-  console.log('in OfferTrade funtion', plants.id);
+  console.log('trade plant user', tradeplantitem.user_id)
+  console.log('trade plant id', tradeplantitem.id)
+  console.log('my user id', user.id)
+  console.log('my plant id', )///id plant in an array
 
     dispatch( {type:'FETCH_OFFER_TRADE', payload: { owner_id: tradeplantitem.user_id, 
-                                              ownedplant_id: tradeplantitem.id, //this is undefined
-                                              trader_id: plants.user_id, //undefined
-                                              tradeplant_id: plants.id, //undefined
+                                              ownedplant_id: tradeplantitem.id, 
+                                              trader_id: plant.user_id, //undefined
+                                              tradeplant_id: user.id, //undefined
                                                } } );
     console.log("dispatch payload", payload);
 }
