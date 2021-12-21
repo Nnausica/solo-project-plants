@@ -29,6 +29,7 @@ import OfferATradeButton from '../OfferATradeButton/OfferATradeButton';
 import TradePlants from '../TradePlants/TradePlants';
 import OfferTrade from '../OfferTrade/OfferTrade';
 import UserPlantsforTrades from '../UserPlantsforTrades/UserPlantsforTrades';
+import TradesToConfirm from '../TradesToConfirm/TradesToConfirm';
 
 import './App.css';
 
@@ -190,6 +191,14 @@ function App() {
             path="/TradePlantDetail"
           >
             <TradePlantDetail />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/TradesToConfirm"
+          >
+            <TradesToConfirm />
           </ProtectedRoute>
 
           <ProtectedRoute

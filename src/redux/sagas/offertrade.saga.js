@@ -8,7 +8,7 @@ import { put, takeLatest } from 'redux-saga/effects';
     try {
       // console.log('OfferTrade.data', action.payload);
       const trades = yield axios.post('/api/offered_trades', action.payload);
-      // yield put( {type: 'SET_OfferTrade', payload: OfferTrade.data});
+      // yield put( {type: 'SET_OfferTrade', payload: OfferTrade.data}); I DONT THINK I HAVE TO DO THIS...
     } catch{
       console.log('get all OfferTrade error');
     }

@@ -46,6 +46,10 @@ function Nav() {
               Plants for Trade
             </Link>
 
+            <Link className="navLink" to="/TradesToConfirm">
+              Trades to Confirm
+            </Link>
+
             <LogOutButton className="navLink" />
           </>
         )}
