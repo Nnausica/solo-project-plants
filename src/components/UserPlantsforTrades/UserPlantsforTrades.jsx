@@ -24,21 +24,22 @@ function UserPlantsforTrades(props) {
   return (
     <div>
       <h2>{heading}</h2>
-
+      {/* <p>{JSON.stringify(plants)}</p> */}
       <section>
         {plants.map( plant => {
-            const setPlantDetail = ()=>{
-              dispatch({
-                  type: 'SET_PLANT_ITEM',
-                  payload: {id: plant.id, 
-                            user_id: plant.user_id,
-                            name: plant.plant_name, 
-                            description: plant.description,
-                            available: plant.available,
-                            requester_id: plant.requester_id,
-                          }
-              });//end dispatch
-          }//end const
+          //   const setPlantDetail = ()=>{
+          //     dispatch({
+          //         type: 'SET_PLANT_ITEM',
+          //         payload: {
+          //                   id: plant.id, 
+          //                   user_id: plant.user_id,
+          //                   name: plant.plant_name, 
+          //                   description: plant.description,
+          //                   available: plant.available,
+          //                   requester_id: plant.requester_id,
+          //                 }
+          //     });//end dispatch
+          // }//end const
 
           return(
             <div>
@@ -46,7 +47,7 @@ function UserPlantsforTrades(props) {
                             
                   <h3>{plant.plant_name} </h3>
                   <h3> {plant.description} </h3>
-                  <OfferTrade/>
+                  <OfferTrade plant={plant}/>
                 </div>
                     );
               

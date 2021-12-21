@@ -6,6 +6,7 @@ import plantsSaga from './plants.saga';
 import addplantSaga from './addplant.saga';
 import tradeplantsSaga from './tradeplants.saga';
 import editavailabilitySaga from './editavailability.saga';
+import OfferTradeSaga from './offertrade.saga';
 
 
 // rootSaga is the primary saga.
@@ -18,11 +19,14 @@ import editavailabilitySaga from './editavailability.saga';
 export default function* rootSaga() {
   yield all([
     loginSaga(), // login saga is now registered
-    registrationSaga(),
-    userSaga(),
-    plantsSaga(),
     addplantSaga(),
-    tradeplantsSaga(),
     editavailabilitySaga(),
+    OfferTradeSaga(),
+    plantsSaga(),
+    registrationSaga(),
+    tradeplantsSaga(),
+    userSaga(),
+
+    
   ]);
 }

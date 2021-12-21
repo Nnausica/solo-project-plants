@@ -37,9 +37,7 @@ router.get('/tradeplants', (req, res) => {
   })
 });
 
-/**
- * POST route template
- */
+/*** POST route template ***/
 router.post('/', (req, res) => {
   console.log('in addplant post:', req.body);
   const addPlantQuery = `INSERT INTO "plants" ("user_id", "plant_name", "description", "available") VALUES ($1, $2, $3, $4)`;

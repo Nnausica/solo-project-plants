@@ -5,10 +5,9 @@ import { put, takeLatest } from 'redux-saga/effects';
 //fetch all OfferTrade from the database that have a user_id that matches the active users id
   function* fetchOfferTrade(action){
    
-
     try {
-      // const OfferTrade = yield axios.get('/api/plant/userplant', {params:{id:action.payload}});
-      console.log('OfferTrade.data', action.data);
+      // console.log('OfferTrade.data', action.payload);
+      const trades = yield axios.post('/api/offered_trades', action.payload);
       // yield put( {type: 'SET_OfferTrade', payload: OfferTrade.data});
     } catch{
       console.log('get all OfferTrade error');

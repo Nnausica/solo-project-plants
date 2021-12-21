@@ -9,8 +9,6 @@ function OfferTrade(props) {
   // a default value of 'Functional Component'
   const store = useSelector((store) => store);
   const tradeplantitem = useSelector((store) => store.tradeplantitem);
-  const plants = useSelector((store) => store.plants);
-  const plant = useSelector((store) => store.plant);
   const user = useSelector((store) => store.user);
 
 
@@ -18,23 +16,24 @@ function OfferTrade(props) {
   const [heading, setHeading] = useState('');
   const dispatch = useDispatch();
 
-const OfferTrade = () => {
+  const OfferTrade = () => {
   // dispatch with NewPlant as the payload
-  console.log('trade plant user', tradeplantitem.user_id)
-  console.log('trade plant id', tradeplantitem.id)
-  console.log('my user id', user.id)
-  console.log('my plant id', )///id plant in an array
+  // console.log('trade plant user', tradeplantitem.user_id)
+  // console.log('trade plant id', tradeplantitem.id)
+  // console.log('my user id', user.id)
+  // console.log('my plant id testing', props.plant.id)///id plant in an array plants[0].id
 
     dispatch( {type:'FETCH_OFFER_TRADE', payload: { owner_id: tradeplantitem.user_id, 
                                               ownedplant_id: tradeplantitem.id, 
-                                              trader_id: plant.user_id, //undefined
-                                              tradeplant_id: user.id, //undefined
+                                              trader_id: user.id, 
+                                              tradeplant_id: props.plant.id,
+                                              accepted_trade: false,
                                                } } );
-    console.log("dispatch payload", payload);
 }
 
   return (
     <div>
+      <p>{JSON.stringify(props)}</p>
           <button onClick={OfferTrade}>Offer A Trade</button>
     </div>
   )
