@@ -4,7 +4,7 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 
-/*** GET route template ***/
+/*** GET route ***/
 router.get('/userplant', (req, res) => {
   // GET route code here
   console.log('in router.get plant', req.query);

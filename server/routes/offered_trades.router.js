@@ -5,10 +5,9 @@ const router = express.Router();
 
 
 /*** GET route ***/
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
   // GET route code here
-  console.log('does this work?');
-  const query = `SELECT * FROM "offered_trades"`
+  const query = `SELECT * FROM "offered_trades" WHERE owner_id=${req.params.id};`
   pool.query( query )
   .then((result) =>{
     console.log();
