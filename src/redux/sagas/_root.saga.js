@@ -8,6 +8,7 @@ import tradeplantsSaga from './tradeplants.saga';
 import editavailabilitySaga from './editavailability.saga';
 import OfferTradeSaga from './offertrade.saga';
 import getTradesSaga from './getTrades.saga';
+import editOwnerSaga from './editOwner.saga';
 
 
 // rootSaga is the primary saga.
@@ -22,6 +23,7 @@ export default function* rootSaga() {
     loginSaga(), // login saga is now registered
     addplantSaga(),
     editavailabilitySaga(),
+    editOwnerSaga(),
     getTradesSaga(),
     OfferTradeSaga(),
     plantsSaga(),

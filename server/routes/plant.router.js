@@ -35,7 +35,7 @@ router.get('/tradeplants', (req, res) => {
   })
 });
 
-/*** POST route template ***/
+/*** POST route ***/
 router.post('/', (req, res) => {
   console.log('in addplant post:', req.body);
   const addPlantQuery = `INSERT INTO "plants" ("user_id", "plant_name", "description", "available") VALUES ($1, $2, $3, $4)`;
@@ -48,6 +48,7 @@ router.post('/', (req, res) => {
   })
 });
 
+/*** UPDATE route ***/
 router.put('/', (req, res) => {
   console.log('in edit:', req.body);
   const editPlantQuery = `UPDATE plants SET available=$1 WHERE id=${req.body.id};`;

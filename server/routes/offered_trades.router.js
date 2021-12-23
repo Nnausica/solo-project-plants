@@ -32,14 +32,17 @@ router.post('/', (req, res) => {
   })
 });
 
-// router.put('/', (req, res) => {
-//   console.log('in edit:', req.body);
-//   pool.query( ).then( ()=>{
-//     res.sendStatus( 200);
-//   }).catch( (err)=>{
-//     console.log( err);
-//     res.send( 500);
-//   })
-// });
+/*** UPDATE route ***/
+router.put('/', (req, res) => {
+  console.log('in owneredit:', req.body);
+  const editOwnerQuery = `UPDATE offered_trades WHERE id=${req.body};`
+  const values = [req.body];
+  pool.query( editOwnerQuery).then( ()=>{
+    res.sendStatus( 200);
+  }).catch( (err)=>{
+    console.log( err);
+    res.send( 500);
+  })
+});
 
 module.exports = router;
