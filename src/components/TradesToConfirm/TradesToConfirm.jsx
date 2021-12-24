@@ -3,16 +3,16 @@ import React, { useEffect, useState } from 'react';
 import {useSelector} from 'react-redux'; 
 import {useDispatch} from 'react-redux';
 import { Link } from 'react-router-dom'; 
-import ConfirmTradeButton from '../ConfirmTradeButton/ConfirmTradeButton';
+import TradeItemToConfirm from '../TradeItemToConfirm/TradeItemToConfirm';
 
 
 function TradesToConfirm(props) {
   // Using hooks we're creating local state for a "heading" variable with
   // a default value of 'Functional Component'
   const dispatch = useDispatch();
-
-  const user = useSelector((store)=> store.user);
-  const offeredtrades = useSelector((store)=> store.offeredtrades);
+    const store = useSelector((store)=> store.store);
+    const user = useSelector((store)=> store.user);
+    const offeredtrades = useSelector((store)=> store.offeredtrades);
 
   const [heading, setHeading] = useState('Trades: Confirm or Pass');
 
@@ -26,20 +26,7 @@ function TradesToConfirm(props) {
       <h2>{heading}</h2>
       <p>{JSON.stringify(offeredtrades)}</p>
 
-      {offeredtrades.map( offeredtrade => {
-        return(
-            <div key={offeredtrade.id} >
-
-                <p> My plant </p>  
-                <h3>{offeredtrade.owner_id} </h3>
-                <h3> {offeredtrade.ownedplant_id} </h3>
-
-                <p> Trade plant </p>
-                <h3>{offeredtrade.tradeplant_id} </h3>
-                <h3> {offeredtrade.trader_id} </h3>
-            </div>
-                  );//end return in map
-      })}// end map
+      {offeredtrades.map(( offeredtrade )=>( <TradeItemToConfirm offeredtrade={ offeredtrade }/> ) )}
 
     </div>
 

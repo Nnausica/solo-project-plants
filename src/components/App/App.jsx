@@ -31,6 +31,7 @@ import OfferTrade from '../OfferTrade/OfferTrade';
 import UserPlantsforTrades from '../UserPlantsforTrades/UserPlantsforTrades';
 import TradesToConfirm from '../TradesToConfirm/TradesToConfirm';
 import ConfirmTradeButton from '../ConfirmTradeButton/ConfirmTradeButton';
+import TradeItemToConfirm from '../TradeItemToConfirm/TradeItemToConfirm';
 
 import './App.css';
 
@@ -200,6 +201,14 @@ function App() {
             path="/TradePlantDetail"
           >
             <TradePlantDetail />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/TradeItemToConfirm"
+          >
+            <TradeItemToConfirm />
           </ProtectedRoute>
 
           <ProtectedRoute
