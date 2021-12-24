@@ -35,6 +35,22 @@ router.get('/tradeplants', (req, res) => {
   })
 });
 
+router.get('/tradeitems:id?', (req, res) => {
+  // GET route code here
+  console.log('in ITEMS router- whats the query:', req.query.id);
+  const query = `SELECT plants.plant_name AS traded_plant_name, plants.description AS traded_plant_description FROM "user" JOIN plants ON plants.user_id="user".id
+  JOIN offered_trades on offered_trades.trader_id=plants.user_id WHERE trader_id=${req.query.id} AND plants.id=offered_trades.tradeplant_id;`
+  pool.query(query)
+  .then((result) =>{
+    console.log('trade items return data:', result.rows);
+    res.send(result.rows)
+  })
+  .catch(err =>{
+    console.log('error in GET trade ITEMS router', err);
+    res.sendStatus(500)
+  })
+});
+
 /*** POST route ***/
 router.post('/', (req, res) => {
   console.log('in addplant post:', req.body);

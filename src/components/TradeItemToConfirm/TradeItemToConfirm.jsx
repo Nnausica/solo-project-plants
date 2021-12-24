@@ -12,18 +12,25 @@ function TradeItemToConfirm(props) {
   const dispatch = useDispatch();
 
   const user = useSelector((store)=> store.user);
+  const tradeconfirmitem = useSelector((store)=>store.tradeconfirmitem)
 
   const [heading, setHeading] = useState('Individual Trade');
 
-  // useEffect(()=>{ 
-  //   //send my user id to filter get request in saga
-  //   dispatch({type: 'FETCH_CONFIRMS', payload:user.id})
-  // }, []);
+  useEffect(()=>{ 
+    //send my user id to filter get request in saga
+    dispatch({type: 'FETCH_ITEM_CONFIRMS', payload:user.id})
+  }, []);
+
+  console.log('tradeconfirmitem:', tradeconfirmitem );
 
   return (
     <div>
       <h2>{heading}</h2>
-      <p>{JSON.stringify(props.offeredtrade.id)}</p>
+      <p>{JSON.stringify(props.offeredtrade)}</p>
+
+      <p>{tradeconfirmitem.name}</p>
+      <p>{tradeconfirmitem.description}</p>
+      
 
     </div>
 
