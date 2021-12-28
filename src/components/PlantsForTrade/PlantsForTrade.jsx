@@ -54,7 +54,7 @@ function PlantsForTrade(props) {
                             <h3> {tradeplant.description} </h3>
                             <Link to="/TradePlantDetail" ><button onClick={setPlantDetail}>'View PLant Details'</button></Link>
                         </div>
-                    );
+                    
               
             </div>
           )

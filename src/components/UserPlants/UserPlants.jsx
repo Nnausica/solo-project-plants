@@ -47,7 +47,7 @@ function UserPlants(props) {
                   <h3> {plant.description} </h3>
                   <Link to="/PlantDetail" ><button onClick={setPlantDetail}>'View Plant Details'</button></Link>
                 </div>
-                    );
+                    
               
             </div>
           )

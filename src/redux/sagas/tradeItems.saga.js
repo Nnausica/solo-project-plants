@@ -6,14 +6,19 @@ import { put, takeLatest } from 'redux-saga/effects';
 
   function* fetchItemConfirms(action){
     
-    const user = useSelector((store)=> store.user);
-    
-    
     try {
-      
+      // console.log('trade item params:', {params:{id:action.payload}} )
       const tradeitem = yield axios.get('/api/plant/tradeitems:id?', {params:{id:action.payload}});
-      
       yield put( {type: 'SET_TRADE_CONFIRM_ITEM', payload: tradeitem.data});
+      
+    } catch{
+      console.log('get TRADE plants error');
+    };
+  
+    try {
+      // console.log('trade item params:', {params:{id:action.payload}} )
+      const tradeitem = yield axios.get('/api/plant/ownertradeitems:id?', {params:{id:action.payload}});
+      yield put( {type: 'SET_OWNED_CONFIRM_ITEM', payload: tradeitem.data});
       
     } catch{
       console.log('get TRADE plants error');
@@ -23,7 +28,8 @@ import { put, takeLatest } from 'redux-saga/effects';
 
 //*** watcher ***
 function* tradeitemsSaga() {
-  yield takeLatest('FETCH_ITEM_CONFIRMS', fetchItemConfirms);
+  console.log('in itemsconfirm watcher');
+  yield takeLatest('FETCH_ITEM_CONFIRMS', fetchItemConfirms );
 }
 
 export default tradeitemsSaga;

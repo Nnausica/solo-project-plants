@@ -26,10 +26,11 @@ function TradeItemToConfirm(props) {
   return (
     <div>
       <h2>{heading}</h2>
-      <p>{JSON.stringify(props.offeredtrade)}</p>
+      {/* <p>{JSON.stringify(props.offeredtrade)}</p> */}
 
-      <p>{tradeconfirmitem.name}</p>
-      <p>{tradeconfirmitem.description}</p>
+      <p>{tradeconfirmitem.traded_plant_name}</p>
+      <p>{tradeconfirmitem.traded_plant_description}</p>
+      
       
 
     </div>
