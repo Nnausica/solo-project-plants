@@ -13,6 +13,7 @@ function TradeItemToConfirm(props) {
 
   const user = useSelector((store)=> store.user);
   const tradeconfirmitem = useSelector((store)=>store.tradeconfirmitem)
+  const ownerconfirmitem = useSelector((store)=>store.ownerconfirmitem)
 
   const [heading, setHeading] = useState('Individual Trade');
 
@@ -21,15 +22,27 @@ function TradeItemToConfirm(props) {
     dispatch({type: 'FETCH_ITEM_CONFIRMS', payload:user.id})
   }, []);
 
+  useEffect(()=>{ 
+    //send my user id to filter get request in saga
+    // console.log('props trader_id', (props.offeredtrade.trader_id) );
+    dispatch({type: 'FETCH_ITEM_TRADER_CONFIRMS', payload:(props.offeredtrade.trader_id)})
+  }, []);
+
   console.log('tradeconfirmitem:', tradeconfirmitem );
 
   return (
     <div>
       <h2>{heading}</h2>
-      {/* <p>{JSON.stringify(props.offeredtrade)}</p> */}
+      <p>{JSON.stringify(props.offeredtrade)}</p>
 
-      <p>{tradeconfirmitem.traded_plant_name}</p>
-      <p>{tradeconfirmitem.traded_plant_description}</p>
+      <p>Plant I Own</p>
+      <p>{tradeconfirmitem.owned_plant_name}</p>
+      <p>{tradeconfirmitem.owned_plant_description}</p>
+
+      <p>Plant being offered to me in a trade</p>
+      <p>{ownerconfirmitem.traded_plant_name}</p>
+      <p>{ownerconfirmitem.traded_plant_description}</p>
+      
       
       
 

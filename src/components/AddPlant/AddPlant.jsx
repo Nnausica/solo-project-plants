@@ -16,6 +16,7 @@ function AddPlant(props) {
   const[newName, setNewName]= useState();
   const[newDescription, setnewDescription]= useState();
   const[newAvailability, setnewAvailability]= useState(1);
+  const[newPhoto, setnewPhoto]= useState();
 
   const changeName= ()=>{
     console.log('in newPlant');
@@ -30,7 +31,12 @@ function AddPlant(props) {
   const changeAvailability = ()=>{
     console.log('in newAvailability');
     setnewAvailability(event.target.value);
-}
+  }
+
+  const changePhoto = ()=>{
+    console.log('in newPhoto');
+    setnewPhoto(event.target.value);
+  }
 
 const AddNewPlant = () => {
   // package up new Widget in object
@@ -38,7 +44,8 @@ const AddNewPlant = () => {
     user_id: user.id,
     plant_name: newName,
     description: newDescription,
-    available: newAvailability
+    available: newAvailability,
+    photo: newPhoto,
   }
   // dispatch with NewPlant as the payload
     dispatch( {type:'ADD_NEWPLANT', payload: newPlant} );
@@ -52,6 +59,7 @@ const AddNewPlant = () => {
       <h1>AddPlant</h1>
             <input type="text" placeholder="Plant Name" onChange={(event)=>changeName(event)}></input>
             <input type="text" placeholder="Plant Description" onChange={(event)=>changeDescription(event)}></input>
+            <input type="text" placeholder="Plant Photo" onChange={(event)=>changePhoto(event)}></input>
     
         <p>Is your plant available for trade?</p>
 

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import {useSelector} from 'react-redux';
 import {useDispatch} from 'react-redux';
 import { Link } from 'react-router-dom'; 
+import Card from 'react-bootstrap/Card';
 
 
 
@@ -49,10 +50,14 @@ function PlantsForTrade(props) {
               <p>{JSON.stringify(plant)}</p> */}
               
               <div key={tradeplant.id} >
-                            
-                            <h3>{tradeplant.plant_name} </h3>
-                            <h3> {tradeplant.description} </h3>
-                            <Link to="/TradePlantDetail" ><button onClick={setPlantDetail}>'View PLant Details'</button></Link>
+              <Card className="plantCard">
+                <Card.Body>          
+                <Card.Title><h3>{tradeplant.plant_name} </h3></Card.Title>
+                <Card.Text><p> {tradeplant.description} </p></Card.Text>
+                            <Link to="/TradePlantDetail" ><button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</button></Link>
+                </Card.Body>
+              </Card>           
+                        
                         </div>
                     
               

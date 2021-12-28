@@ -12,3 +12,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('react-root'),
 );
+
+import 'bootstrap/dist/css/bootstrap.min.css';

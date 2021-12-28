@@ -1,7 +1,9 @@
 const ownerconfirmitem = (state = {}, action) =>{
   switch (action.type){
     case 'SET_OWNED_CONFIRM_ITEM':
-      return action.payload[0];
+      // for (let i=0; i<action.payload.length; i++){
+      // return action.payload[i]};
+      return action.payload
     default:
       return state;
   }

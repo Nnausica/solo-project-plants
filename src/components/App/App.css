@@ -5,6 +5,7 @@ body,
 }
 
 body {
+  background-color: #F5FFD6 !important;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0px;
 }
@@ -109,4 +110,20 @@ Form Treatment
 input {
   margin: 5px;
   margin-bottom: 10px;
+}
+
+
+
+.primaryButton{
+  border-color: #9EF01A !important;
+  background-color: #008000 !important;
+}
+.primaryButton:hover{
+  border-color: #9EF01A !important;
+  background-color: #003D1E !important;
+}
+
+.plantCard{
+  width: 30%;
+  border-color: #9EF01A !important;
 }
