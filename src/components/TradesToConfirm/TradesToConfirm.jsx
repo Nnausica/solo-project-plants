@@ -27,7 +27,7 @@ function TradesToConfirm(props) {
       {/* <p>{JSON.stringify(offeredtrades)}</p> */}
 
       {offeredtrades.map(( offeredtrade, index )=>( <TradeItemToConfirm offeredtrade={ offeredtrade } index={index}/> ) )}
-
+ 
     </div>
 
   ); //end return

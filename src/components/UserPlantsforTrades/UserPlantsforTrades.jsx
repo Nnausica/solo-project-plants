@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom';
 import OfferTrade from '../OfferTrade/OfferTrade';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import "../UserPlantsforTrades/UserPlantsforTrades.css";
 
 
 function UserPlantsforTrades(props) {
@@ -28,36 +27,25 @@ function UserPlantsforTrades(props) {
   return (
     <div>
       <h2 className="header">{heading}</h2>
-      {/* <p>{JSON.stringify(plants)}</p> */}
-      <section>
+      <Container className="tradecardsContainer">
         {plants.map( plant => {
-        // maps the plants associated with the user's ID
+        // maps the plants NOT associated with the user's ID
           return(
-            <div>
-              <div key={plant.id} >
-              <Container className="cardsContainer">
-                <Row>
-                  <Col>
+
+               <div>
                     <Card className="plantCard">
                       <Card.Body>
                         <img src={plant.photo}/>         
                         <Card.Title><h3>{plant.plant_name} </h3></Card.Title>
-                        <Card.Text><h3> {plant.description} </h3></Card.Text>
+                        <Card.Text><p> {plant.description} </p></Card.Text>
                         <OfferTrade plant={plant}/>
                       </Card.Body>
                     </Card>  
-                  </Col>
-                </Row>
-              </Container> 
                 </div>
-              
-            </div>
           )
         
-        })}
-
-      </section>           
-  
+        })}         
+      </Container>
    
     </div>
   ); //end return

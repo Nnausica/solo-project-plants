@@ -131,10 +131,7 @@ text-align: center;
 
 .plantCard{
   border-color: #9EF01A !important;
+  max-width: 200px;
 }
 
-.cardsContainer{
-  display: grid !important;
-  display: flex;
-  grid-template-columns: 200px 200px 200px !important;
-}
+

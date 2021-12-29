@@ -25,7 +25,10 @@ function TradeItemToConfirm(props) {
   useEffect(()=>{ 
     //send my user id to filter get request in saga
     // console.log('props trader_id', (props.offeredtrade.trader_id) );
-    dispatch({type: 'FETCH_ITEM_TRADER_CONFIRMS', payload:(props.offeredtrade.trader_id)})
+    dispatch({type: 'FETCH_ITEM_TRADER_CONFIRMS', payload:({
+      trader_id: props.offeredtrade.trader_id, 
+      owner_id:user.id
+    })})
   }, []);
 
   console.log('tradeconfirmitem:', tradeconfirmitem );

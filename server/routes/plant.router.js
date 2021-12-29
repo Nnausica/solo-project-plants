@@ -55,7 +55,7 @@ router.get('/ownertradeitems:id?', (req, res) => {
   // GET route code here
   console.log('in OWNER ITEMS router- whats the query:', req.query.id);
   const query = `SELECT plants.plant_name AS traded_plant_name, plants.description AS traded_plant_description FROM "user" JOIN plants ON plants.user_id="user".id
-  JOIN offered_trades on offered_trades.trader_id=plants.user_id WHERE trader_id=${req.query.id} AND plants.id=offered_trades.tradeplant_id;`
+  JOIN offered_trades on offered_trades.trader_id=plants.user_id WHERE trader_id=${req.query.id} AND plants.id=offered_trades.tradeplant_id AND offered_trades.owner_id=${req.query.owner_id};`
   pool.query(query)
   .then((result) =>{
     console.log('owned items return data:', result.rows);

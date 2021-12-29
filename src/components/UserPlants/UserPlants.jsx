@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import "../UserPlants/UserPlants.css";
 
 
 function UserPlants(props) {
@@ -28,9 +27,9 @@ function UserPlants(props) {
   return (
     <div>
       <h2 className="header">{heading}</h2>
-
-      <section>
+      <Container className="cardsContainer">
         {plants.map( plant => {
+          //maps the plants associated with the User's ID
             const setPlantDetail = ()=>{
               dispatch({
                   type: 'SET_PLANT_ITEM',
@@ -43,16 +42,12 @@ function UserPlants(props) {
                             // photo: plant.photo,
                           }
               });//end dispatch
-          }//end const
-
-          return(
-            <div>
               
-              <div key={plant.id} >
-              <Container className="cardsContainer">
-              <Row>
-                <Col>
-                  
+          }//end const
+         
+          return(
+           
+                <div >
                   <Card className="plantCard"> 
                     {/* <Card.Img variant="top" src={plant.photo}/>    */}
                     <Card.Body>
@@ -62,23 +57,12 @@ function UserPlants(props) {
                         <Link to="/PlantDetail" ><Button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</Button></Link>
                     </Card.Body>
                   </Card>  
-
-                </Col>
-                </Row>
-              </Container>       
                 </div>
-                    
-              
-            </div>
+           
           )
         
-        })}
-
-      </section>           
-   
-   
-   
-   
+        })}          
+      </Container>
    
     </div>
   ); //end return
