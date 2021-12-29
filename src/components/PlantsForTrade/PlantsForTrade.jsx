@@ -4,6 +4,8 @@ import {useSelector} from 'react-redux';
 import {useDispatch} from 'react-redux';
 import { Link } from 'react-router-dom'; 
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container'
 
 
 
@@ -50,13 +52,15 @@ function PlantsForTrade(props) {
               <p>{JSON.stringify(plant)}</p> */}
               
               <div key={tradeplant.id} >
+               <Container>
               <Card className="plantCard">
                 <Card.Body>          
                 <Card.Title><h3>{tradeplant.plant_name} </h3></Card.Title>
                 <Card.Text><p> {tradeplant.description} </p></Card.Text>
-                            <Link to="/TradePlantDetail" ><button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</button></Link>
+                            <Link to="/TradePlantDetail" ><Button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</Button></Link>
                 </Card.Body>
-              </Card>           
+              </Card>   
+              </Container>         
                         
                         </div>
                     

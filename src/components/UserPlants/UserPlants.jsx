@@ -5,6 +5,8 @@ import {useDispatch} from 'react-redux';
 import { Link } from 'react-router-dom'; 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
 
 
 function UserPlants(props) {
@@ -37,7 +39,7 @@ function UserPlants(props) {
                             description: plant.description,
                             available: plant.available,
                             requester_id: plant.requester_id,
-                            photo: plant.photo,
+                            // photo: plant.photo,
                           }
               });//end dispatch
           }//end const
@@ -45,15 +47,19 @@ function UserPlants(props) {
           return(
             <div>
               <div key={plant.id} >
+              <Container>
+                <Col>
               <Card className="plantCard"> 
-                  <Card.Img variant="top" src={plant.photo}/>   
+                  {/* <Card.Img variant="top" src={plant.photo}/>    */}
                   <Card.Body>
                     {/* <img src={plant.photo}/> */}
                     <Card.Title><h4>{plant.plant_name} </h4></Card.Title>
                     <Card.Text><p> {plant.description} </p></Card.Text>
                       <Link to="/PlantDetail" ><Button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</Button></Link>
                   </Card.Body>
-              </Card>        
+              </Card> 
+              </Col>
+              </Container>       
                 </div>
                     
               

@@ -33,15 +33,18 @@ function TradeItemToConfirm(props) {
   return (
     <div>
       <h2>{heading}</h2>
-      <p>{JSON.stringify(props.offeredtrade)}</p>
+      <p>{JSON.stringify(props)}</p>
 
       <p>Plant I Own</p>
-      <p>{tradeconfirmitem.owned_plant_name}</p>
-      <p>{tradeconfirmitem.owned_plant_description}</p>
+      <p>{JSON.stringify(tradeconfirmitem[props.index])}</p>
+      {/* <p>{tradeconfirmitem.owned_plant_name}</p>
+      <p>{tradeconfirmitem.owned_plant_description}</p> */}
 
       <p>Plant being offered to me in a trade</p>
-      <p>{ownerconfirmitem.traded_plant_name}</p>
-      <p>{ownerconfirmitem.traded_plant_description}</p>
+      <p>{JSON.stringify(ownerconfirmitem[props.index])}</p>
+  
+      {/* <p>{ownerconfirmitem.traded_plant_name}</p>
+      <p>{ownerconfirmitem.traded_plant_description}</p> */}
       
       
       

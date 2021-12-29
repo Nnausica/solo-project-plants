@@ -15,7 +15,7 @@ import { put, takeLatest } from 'redux-saga/effects';
       
     } catch{
       console.log('get TRADE plants error');
-    }
+    } 
   }
 
 
