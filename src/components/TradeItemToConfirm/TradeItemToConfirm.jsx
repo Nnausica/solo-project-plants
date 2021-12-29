@@ -39,15 +39,28 @@ function TradeItemToConfirm(props) {
       <p>{JSON.stringify(props)}</p>
 
       <p>Plant I Own</p>
-      <p>{JSON.stringify(tradeconfirmitem[props.index])}</p>
-      {/* <p>{tradeconfirmitem.owned_plant_name}</p>
-      <p>{tradeconfirmitem.owned_plant_description}</p> */}
+      {/* <p>{JSON.stringify(tradeconfirmitem[props.index])}</p> */}
+
+      {tradeconfirmitem[props.index] != undefined?
+      <span>
+          <p>{ tradeconfirmitem[props.index].owned_plant_name }</p>
+          <p>{ tradeconfirmitem[props.index].owned_plant_description }</p>
+            </span>:
+          <p>'loading'</p>   
+              }
+
 
       <p>Plant being offered to me in a trade</p>
-      <p>{JSON.stringify(ownerconfirmitem[props.index])}</p>
-  
-      {/* <p>{ownerconfirmitem.traded_plant_name}</p>
-      <p>{ownerconfirmitem.traded_plant_description}</p> */}
+      {/* <p>{JSON.stringify(ownerconfirmitem[props.index])}</p> */}
+
+      {ownerconfirmitem[props.index] != undefined?
+      <span>
+          <p>{ ownerconfirmitem[props.index][0].traded_plant_name }</p>
+          <p>{ ownerconfirmitem[props.index][0].traded_plant_description }</p>
+            </span>:
+          <p>'loading'</p>   
+              }
+  {/* {"traded_plant_name":"Umbrella Tree","traded_plant_description":"Umbrella-y"} */}
       
       
       
