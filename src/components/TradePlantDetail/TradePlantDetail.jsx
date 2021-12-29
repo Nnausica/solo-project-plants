@@ -11,14 +11,14 @@ function TradePlantDetail(props) {
   const tradeplantitem = useSelector((store) => store.tradeplantitem);
   const plantItem = useSelector((store) => store.plantItem);
 
-  const [heading, setHeading] = useState('Plant for Trade');
+  const [heading, setHeading] = useState('Plant for Trade Details');
 
 
 
   return (
     <div>
       <h2>{heading}</h2>
-      <p>In Plant Details</p>
+    
      {/* <p>{JSON.stringify(tradeplantitem)}</p> */}
       <p>{tradeplantitem.name}</p>
       <p>{tradeplantitem.description}</p>
@@ -26,7 +26,7 @@ function TradePlantDetail(props) {
       <OfferATradeButton/>
 
     
-      <Link to="/PlantsForTrade"><button>Back to Plants for Trade</button></Link>
+      {/* <Link to="/PlantsForTrade"><button>Back to Plants for Trade</button></Link> */}
     </div>
   );
 }

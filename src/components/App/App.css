@@ -124,6 +124,11 @@ input {
 }
 
 .plantCard{
-  width: 30%;
   border-color: #9EF01A !important;
+}
+
+.cardsContainer{
+  display: grid !important;
+  display: flex;
+  grid-template-columns: 30% !important;
 }

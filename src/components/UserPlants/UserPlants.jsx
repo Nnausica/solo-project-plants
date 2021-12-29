@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 
@@ -47,18 +48,20 @@ function UserPlants(props) {
           return(
             <div>
               <div key={plant.id} >
-              <Container>
-                <Col>
-              <Card className="plantCard"> 
-                  {/* <Card.Img variant="top" src={plant.photo}/>    */}
-                  <Card.Body>
-                    {/* <img src={plant.photo}/> */}
-                    <Card.Title><h4>{plant.plant_name} </h4></Card.Title>
-                    <Card.Text><p> {plant.description} </p></Card.Text>
-                      <Link to="/PlantDetail" ><Button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</Button></Link>
-                  </Card.Body>
-              </Card> 
-              </Col>
+              <Container className="cardsContainer">
+           
+                <Col md="auto">
+                  <Card className="plantCard"> 
+                    {/* <Card.Img variant="top" src={plant.photo}/>    */}
+                    <Card.Body>
+                      {/* <img src={plant.photo}/> */}
+                      <Card.Title><h4>{plant.plant_name} </h4></Card.Title>
+                      <Card.Text><p> {plant.description} </p></Card.Text>
+                        <Link to="/PlantDetail" ><Button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</Button></Link>
+                    </Card.Body>
+                  </Card> 
+                </Col>
+            
               </Container>       
                 </div>
                     

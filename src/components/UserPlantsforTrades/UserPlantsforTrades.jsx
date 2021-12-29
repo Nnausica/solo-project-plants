@@ -49,7 +49,6 @@ function UserPlantsforTrades(props) {
                   <h3> {plant.description} </h3>
                   <OfferTrade plant={plant}/>
                 </div>
-                    );
               
             </div>
           )
@@ -57,10 +56,7 @@ function UserPlantsforTrades(props) {
         })}
 
       </section>           
-   
-   
-   
-   
+  
    
     </div>
   ); //end return

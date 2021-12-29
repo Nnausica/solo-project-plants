@@ -27,14 +27,13 @@ function OfferATradeButton(props) {
         //if OfferTrade is true- show list of plant details
         offerTrade?
         <span>
-            <p>This will be the list of user plants</p>
+            {/* <p>This will be the list of user plants</p> */}
             <UserPlantsforTrades/>
-            <button onClick={toggleOfferTrade}>JK Dont want to trade</button>
+            <Link to="/PlantsForTrade"><button onClick={toggleOfferTrade}>JK Dont want to trade</button> </Link>
         </span>
         :
         //if OfferTrade is false show nothing....
         <span>
-            <p> edit mode is false- this is a test sentance</p>
             <button onClick={toggleOfferTrade}>Offer a Trade</button>
         </span>
       
