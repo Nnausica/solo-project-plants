@@ -57,8 +57,8 @@ function UserPlants(props) {
                     {/* <Card.Img variant="top" src={plant.photo}/>    */}
                     <Card.Body>
                       <img src={plant.photo}/>
-                      <Card.Title><h4>{plant.plant_name} </h4></Card.Title>
-                      <Card.Text><p> {plant.description} </p></Card.Text>
+                          <Card.Title><h4>{plant.plant_name} </h4></Card.Title>
+                          <Card.Text><p> {plant.description} </p></Card.Text>
                         <Link to="/PlantDetail" ><Button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</Button></Link>
                     </Card.Body>
                   </Card>  
