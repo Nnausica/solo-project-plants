@@ -4,6 +4,10 @@ import {useSelector} from 'react-redux';
 import {useDispatch} from 'react-redux';
 import { Link } from 'react-router-dom'; 
 import OfferTrade from '../OfferTrade/OfferTrade';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 
 function UserPlantsforTrades(props) {
@@ -23,31 +27,28 @@ function UserPlantsforTrades(props) {
 
   return (
     <div>
-      <h2>{heading}</h2>
+      <h2 className="header">{heading}</h2>
       {/* <p>{JSON.stringify(plants)}</p> */}
       <section>
         {plants.map( plant => {
-          //   const setPlantDetail = ()=>{
-          //     dispatch({
-          //         type: 'SET_PLANT_ITEM',
-          //         payload: {
-          //                   id: plant.id, 
-          //                   user_id: plant.user_id,
-          //                   name: plant.plant_name, 
-          //                   description: plant.description,
-          //                   available: plant.available,
-          //                   requester_id: plant.requester_id,
-          //                 }
-          //     });//end dispatch
-          // }//end const
-
+        // maps the plants associated with the user's ID
           return(
             <div>
               <div key={plant.id} >
-                            
-                  <h3>{plant.plant_name} </h3>
-                  <h3> {plant.description} </h3>
-                  <OfferTrade plant={plant}/>
+              <Container className="cardsContainer">
+                <Row>
+                  <Col>
+                    <Card className="plantCard">
+                      <Card.Body>
+                        <img src={plant.photo}/>         
+                        <Card.Title><h3>{plant.plant_name} </h3></Card.Title>
+                        <Card.Text><h3> {plant.description} </h3></Card.Text>
+                        <OfferTrade plant={plant}/>
+                      </Card.Body>
+                    </Card>  
+                  </Col>
+                </Row>
+              </Container> 
                 </div>
               
             </div>

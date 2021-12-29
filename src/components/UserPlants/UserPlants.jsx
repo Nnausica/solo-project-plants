@@ -27,7 +27,7 @@ function UserPlants(props) {
 
   return (
     <div>
-      <h2>{heading}</h2>
+      <h2 className="header">{heading}</h2>
 
       <section>
         {plants.map( plant => {
@@ -47,21 +47,24 @@ function UserPlants(props) {
 
           return(
             <div>
+              
               <div key={plant.id} >
               <Container className="cardsContainer">
-           
-                <Col md="auto">
+              <Row>
+                <Col>
+                  
                   <Card className="plantCard"> 
                     {/* <Card.Img variant="top" src={plant.photo}/>    */}
                     <Card.Body>
-                      {/* <img src={plant.photo}/> */}
+                      <img src={plant.photo}/>
                       <Card.Title><h4>{plant.plant_name} </h4></Card.Title>
                       <Card.Text><p> {plant.description} </p></Card.Text>
                         <Link to="/PlantDetail" ><Button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</Button></Link>
                     </Card.Body>
-                  </Card> 
+                  </Card>  
+
                 </Col>
-            
+                </Row>
               </Container>       
                 </div>
                     

@@ -28,7 +28,7 @@ function PlantsForTrade(props) {
 
   return (
     <div>
-      <h2>{heading}</h2>
+      <h2 className="header">{heading}</h2>
       {/* <p>{JSON.stringify(tradeplants)}</p> */}
 
       <section>
@@ -42,6 +42,7 @@ function PlantsForTrade(props) {
                             description: tradeplant.description,
                             available: tradeplant.available,
                             requester_id: tradeplant.requester_id,
+                            photo: tradeplant.photo,
                           }
               });//end dispatch
           }//end const
@@ -54,7 +55,8 @@ function PlantsForTrade(props) {
               <div key={tradeplant.id} >
                <Container>
               <Card className="plantCard">
-                <Card.Body>          
+                <Card.Body>    
+                <img src={tradeplant.photo}/>      
                 <Card.Title><h3>{tradeplant.plant_name} </h3></Card.Title>
                 <Card.Text><p> {tradeplant.description} </p></Card.Text>
                             <Link to="/TradePlantDetail" ><Button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</Button></Link>

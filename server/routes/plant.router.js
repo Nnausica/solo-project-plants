@@ -70,8 +70,8 @@ router.get('/ownertradeitems:id?', (req, res) => {
 /*** POST route ***/
 router.post('/', (req, res) => {
   console.log('in addplant post:', req.body);
-  const addPlantQuery = `INSERT INTO "plants" ("user_id", "plant_name", "description", "available") VALUES ($1, $2, $3, $4)`;
-  values = [req.body.user_id, req.body.plant_name, req.body.description, req.body.available];
+  const addPlantQuery = `INSERT INTO "plants" ("user_id", "plant_name", "description", "available", "photo") VALUES ($1, $2, $3, $4, $5)`;
+  values = [req.body.user_id, req.body.plant_name, req.body.description, req.body.available, req.body.photo];
   pool.query( addPlantQuery, values).then( (results)=>{
     res.sendStatus( 200);
   }).catch( (err)=>{
