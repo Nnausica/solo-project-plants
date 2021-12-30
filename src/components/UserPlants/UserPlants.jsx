@@ -39,6 +39,7 @@ function UserPlants(props) {
                             description: plant.description,
                             available: plant.available,
                             requester_id: plant.requester_id,
+                            photo: plant.photo
                             // photo: plant.photo,
                           }
               });//end dispatch

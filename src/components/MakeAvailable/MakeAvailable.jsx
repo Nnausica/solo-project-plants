@@ -34,7 +34,7 @@ const EditPlant = () => {
                 <option value="False">No</option>
               </select>
           <button onClick={EditPlant}>Make Availabile</button>
-          <p>{JSON.stringify(plantItem)}</p>
+          {/* <p>{JSON.stringify(plantItem)}</p> */}
     </div>
   )
 }

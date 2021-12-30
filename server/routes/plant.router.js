@@ -93,4 +93,18 @@ router.put('/', (req, res) => {
   })
 });
 
+router.put('/newowner', (req, res) => {
+  console.log('in newOwnerUser:', req.body);
+
+  const editPlantQuery = `UPDATE plants SET user_id=$1 WHERE plants.id=$2;`
+  const values = [req.body.owner_id, req.body.ownedplant_id];
+
+  pool.query( editPlantQuery, values).then( ()=>{
+    res.sendStatus( 200);
+  }).catch( (err)=>{
+    console.log( err);
+    res.send( 500);
+  })
+});
+
 module.exports = router;

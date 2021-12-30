@@ -68,4 +68,17 @@ router.put('/', (req, res) => {
   })
 });
 
+/*** DELETE route ***/
+router.delete('/', (req, res) => {
+  console.log('in delete route on server:', req.body);
+  const deleteOfferedTrades = `DELETE FROM offered_trades WHERE id=${req.body};`
+  const values = [req.body];
+  pool.query( deleteOfferedTrades).then( ()=>{
+    res.sendStatus( 200);
+  }).catch( (err)=>{
+    console.log( err);
+    res.send( 500);
+  })
+});
+
 module.exports = router;

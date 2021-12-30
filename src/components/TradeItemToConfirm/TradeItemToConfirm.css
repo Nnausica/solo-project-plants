@@ -1,6 +1,7 @@
 .tradeItemCard{
     border-color: #9EF01A !important;
     max-width: 300px;
+    text-align: center;
 }
 
 .tradeCardsContainer{

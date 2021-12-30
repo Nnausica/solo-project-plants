@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 // Basic functional component structure for React with default state
 // value setup. When making a new component be sure to replace the
 // component name ConfirmTradeButton with the name for the new component.
-function ConfirmTradeButton() {
+function ConfirmTradeButton(props) {
   // Using hooks we're creating local state for a "heading" variable with
   // a default value of 'Functional Component'
   const store = useSelector((store) => store);
@@ -16,27 +16,23 @@ function ConfirmTradeButton() {
   const dispatch = useDispatch();
 
 
-  const[newOwner, setNewOwner]=useState({});
+  const changeOwnerUser = () => {
 
-  const changeOwner = () => {
-    // dispatch with NewPlant as the payload
-    console.log('offeredtrades.trader_id:', offeredtrades.trader_id);
-
-      setNewOwner( newOwner= {owner_id: user.id,
-                              ownedplant_id: offeredtrades.tradeplant_id,
-                              tradeplant_id: offeredtrades.ownedplant_id,
-                              trader_id: offeredtrades.owner_id,
-                              accepted_trade: true} );
-    //dispatch with newOwner as the payload
-    
-    console.log('new owner:', newOwner)
-    dispatch({type:'EDIT_OWNER', payload: newOwner})
+    dispatch({type:'EDIT_OWNER', payload:{owner_id: user.id,
+                                      ownedplant_id: props.offeredtrade.tradeplant_id} })
+    changeOwnerTrader();
   }
 
+  const changeOwnerTrader = () => {
+     //sets trader id as the payload for owners plant 
+ 
+    dispatch({type:'EDIT_OWNER', payload:{owner_id:props.offeredtrade.trader_id,
+      ownedplant_id: props.offeredtrade.ownedPlant.id}})
+  }
 
   return (
     <div>
-          <button onClick={changeOwner}>Confirm Trade</button>
+          <button className="primaryButton" onClick={changeOwnerUser}>Confirm Trade</button>
     </div>
   )
 }

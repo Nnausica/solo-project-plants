@@ -7,6 +7,7 @@ import ConfirmTradeButton from '../ConfirmTradeButton/ConfirmTradeButton';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import '../TradeItemToConfirm/TradeItemToConfirm.css';
+import PassTradeButton from '../PassTradeButton/PassTradeButton';
 
 
 function TradeItemToConfirm(props) {
@@ -22,8 +23,8 @@ function TradeItemToConfirm(props) {
 
   return (
     <div>
-      <h2>{heading}</h2>
-      <p>{JSON.stringify(props)}</p>
+      <h2 className="header" >{heading}</h2>
+      {/* <p>{JSON.stringify(props)}</p> */}
 
       
       <Container className="tradeCardsContainer">
@@ -44,6 +45,9 @@ function TradeItemToConfirm(props) {
       <p>{props.offeredtrade.tradePlant.description}</p>
       </Card>
       </div>
+
+      <ConfirmTradeButton  offeredtrade= {props.offeredtrade}/>
+      <PassTradeButton offeredtrade= {props.offeredtrade}/>
       </Container>
      
      </div>
