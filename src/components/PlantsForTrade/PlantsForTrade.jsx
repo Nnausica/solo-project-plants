@@ -30,8 +30,7 @@ function PlantsForTrade(props) {
     <div>
       <h2 className="header">{heading}</h2>
       {/* <p>{JSON.stringify(tradeplants)}</p> */}
-
-      <section>
+      <Container className= "cardsContainer">
         {tradeplants.map( tradeplant => {
             const setPlantDetail = ()=>{
               dispatch({
@@ -49,31 +48,19 @@ function PlantsForTrade(props) {
 
           return(
             <div>
-              {/* <Link to="/PlantDetail"><p>{plant.plant_name}</p></Link>
-              <p>{JSON.stringify(plant)}</p> */}
-              
-              <div key={tradeplant.id} >
-               <Container>
-              <Card className="plantCard">
-                <Card.Body>    
-                <img src={tradeplant.photo}/>      
-                <Card.Title><h3>{tradeplant.plant_name} </h3></Card.Title>
-                <Card.Text><p> {tradeplant.description} </p></Card.Text>
-                            <Link to="/TradePlantDetail" ><Button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</Button></Link>
-                </Card.Body>
-              </Card>   
-              </Container>         
-                        
-                        </div>
-                    
-              
+                <Card className="plantCard">
+                  <Card.Body>    
+                  <img src={tradeplant.photo}/>      
+                  <Card.Title><h3>{tradeplant.plant_name} </h3></Card.Title>
+                  <Card.Text><p> {tradeplant.description} </p></Card.Text>
+                              <Link to="/TradePlantDetail" ><Button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</Button></Link>
+                  </Card.Body>
+                </Card>   
             </div>
           )
         
-        })}
-
-      </section>           
-
+        })}           
+      </Container>   
     </div>
   );
 }

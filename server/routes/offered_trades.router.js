@@ -4,15 +4,38 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 
-/*** GET route ***/
 router.get('/:id', (req, res) => {
   // GET route code here
   const query = `SELECT * FROM "offered_trades" WHERE owner_id=${req.params.id};`
   pool.query( query )
-  .then((result) =>{
-    console.log();
-    res.send(result.rows)
-  })
+  .then((results) =>{
+    let objectToSend = [];
+    results.rows.map((offer) => {
+      console.log( 'offer:', offer );
+      const ownedQuery = `SELECT * FROM "plants" WHERE id=${offer.ownedplant_id};`;
+      pool.query( ownedQuery ).then( (result1)=>{
+        console.log( result1.rows );
+        offer.ownedPlant= result1.rows[0];
+        const tradeQuery = `SELECT * FROM "plants" WHERE id=${offer.tradeplant_id};`;
+        pool.query( tradeQuery ).then( (result2)=>{
+          console.log( result2.rows );
+          offer.tradePlant= result2.rows[0];
+          console.log( offer );
+          objectToSend.push( offer );
+          if( objectToSend.length === results.rowCount ){
+            console.log( ' ------------------------> end of map:', objectToSend );
+            res.send( objectToSend );
+          }
+        }).catch( (err)=>{
+          console.log( err );
+          res.sendStatus( 500 );
+        }) // end owned
+      }).catch( (err)=>{
+        console.log( err );
+        res.sendStatus( 500 );
+      }) // end traded
+    }) // end map
+  }) // end all
   .catch(err=>{
     console.log(err);
     res.sendStatus(500)

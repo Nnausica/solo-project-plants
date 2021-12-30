@@ -27,7 +27,8 @@ function UserPlantsforTrades(props) {
   return (
     <div>
       <h2 className="header">{heading}</h2>
-      <Container className="tradecardsContainer">
+
+      <Container className="cardsContainer">
         {plants.map( plant => {
         // maps the plants NOT associated with the user's ID
           return(
@@ -43,7 +44,6 @@ function UserPlantsforTrades(props) {
                     </Card>  
                 </div>
           )
-        
         })}         
       </Container>
    

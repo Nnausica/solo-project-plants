@@ -12,26 +12,26 @@ function TradeItemToConfirm(props) {
   const dispatch = useDispatch();
 
   const user = useSelector((store)=> store.user);
-  const tradeconfirmitem = useSelector((store)=>store.tradeconfirmitem)
-  const ownerconfirmitem = useSelector((store)=>store.ownerconfirmitem)
+  // const tradeconfirmitem = useSelector((store)=>store.tradeconfirmitem)
+  // const ownerconfirmitem = useSelector((store)=>store.ownerconfirmitem)
 
-  const [heading, setHeading] = useState('Individual Trade');
+  const [heading, setHeading] = useState('Individual Trades');
 
-  useEffect(()=>{ 
-    //send my user id to filter get request in saga
-    dispatch({type: 'FETCH_ITEM_CONFIRMS', payload:user.id})
-  }, []);
+  // useEffect(()=>{ 
+  //   //send my user id to filter get request in saga
+  //   dispatch({type: 'FETCH_ITEM_CONFIRMS', payload:user.id})
+  // }, []);
 
-  useEffect(()=>{ 
-    //send my user id to filter get request in saga
-    // console.log('props trader_id', (props.offeredtrade.trader_id) );
-    dispatch({type: 'FETCH_ITEM_TRADER_CONFIRMS', payload:({
-      trader_id: props.offeredtrade.trader_id, 
-      owner_id:user.id
-    })})
-  }, []);
+  // useEffect(()=>{ 
+  //   //send my user id to filter get request in saga
+  //   // console.log('props trader_id', (props.offeredtrade.trader_id) );
+  //   dispatch({type: 'FETCH_ITEM_TRADER_CONFIRMS', payload:({
+  //     trader_id: props.offeredtrade.trader_id, 
+  //     owner_id:user.id
+  //   })})
+  // }, []);
 
-  console.log('tradeconfirmitem:', tradeconfirmitem );
+  // console.log('tradeconfirmitem:', tradeconfirmitem );
 
   return (
     <div>
@@ -39,32 +39,13 @@ function TradeItemToConfirm(props) {
       <p>{JSON.stringify(props)}</p>
 
       <p>Plant I Own</p>
-      {/* <p>{JSON.stringify(tradeconfirmitem[props.index])}</p> */}
-
-      {tradeconfirmitem[props.index] != undefined?
-      <span>
-          <p>{ tradeconfirmitem[props.index].owned_plant_name }</p>
-          <p>{ tradeconfirmitem[props.index].owned_plant_description }</p>
-            </span>:
-          <p>'loading'</p>   
-              }
-
-
+      <p>{props.offeredtrade.ownedPlant.plant_name}</p>
+      <p>{props.offeredtrade.ownedPlant.description}</p>
+      {/* <p>{ JSON.stringify(props.offeredtrade.ownedPlant.description)}</p> */}
+      {/* <p>{ props.offeredtrade.ownedPlant.photo}</p> */}
       <p>Plant being offered to me in a trade</p>
-      {/* <p>{JSON.stringify(ownerconfirmitem[props.index])}</p> */}
-
-      {ownerconfirmitem[props.index] != undefined?
-      <span>
-          <p>{ ownerconfirmitem[props.index][0].traded_plant_name }</p>
-          <p>{ ownerconfirmitem[props.index][0].traded_plant_description }</p>
-            </span>:
-          <p>'loading'</p>   
-              }
-  {/* {"traded_plant_name":"Umbrella Tree","traded_plant_description":"Umbrella-y"} */}
-      
-      
-      
-
+      <p>{ JSON.stringify(props.tradePlant)}</p>
+      {/* <p>{props.offeredtrade.tradePlant.plant_name}</p> */}
     </div>
 
   ); //end return

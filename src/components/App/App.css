@@ -129,6 +129,13 @@ text-align: center;
   background-color: #003D1E !important;
 }
 
+.cardsContainer{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .plantCard{
   border-color: #9EF01A !important;
   max-width: 200px;

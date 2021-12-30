@@ -3,9 +3,7 @@ import {useSelector} from 'react-redux';
 import { Link } from 'react-router-dom'; 
 import OfferATradeButton from '../OfferATradeButton/OfferATradeButton';
 import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import "../TradePlantDetail/TradePlantDetail.css"
 
 
 
@@ -24,7 +22,7 @@ function TradePlantDetail(props) {
       <h2 className="header">{heading}</h2>
     
      {/* <p>{JSON.stringify(tradeplantitem)}</p> */}
-      <Card>
+      <Card className="tradePlantDetailCard">
         <Card.Body>
           <img src={tradeplantitem.photo}/> 
           <Card.Title><p>{tradeplantitem.name}</p></Card.Title>
