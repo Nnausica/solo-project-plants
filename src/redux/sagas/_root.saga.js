@@ -9,8 +9,6 @@ import editavailabilitySaga from './editavailability.saga';
 import OfferTradeSaga from './offertrade.saga';
 import getTradesSaga from './getTrades.saga';
 import editOwnerSaga from './editOwner.saga';
-import tradeitemsSaga from './tradeItems.saga';
-import traderitemsSaga from './traderItems.saga';
 
 
 
@@ -32,9 +30,7 @@ export default function* rootSaga() {
     OfferTradeSaga(),
     plantsSaga(),
     registrationSaga(),
-    tradeitemsSaga(),
     tradeplantsSaga(),
-    traderitemsSaga(),
     userSaga(),
 
   ]);

@@ -1,3 +1,7 @@
 .tradePlantDetailCard{
-    
+    max-width: 80% px;
+}
+
+.cardPic{
+    align-items: center;
 }

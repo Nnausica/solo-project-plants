@@ -21,12 +21,14 @@ function ConfirmTradeButton() {
   const changeOwner = () => {
     // dispatch with NewPlant as the payload
     console.log('offeredtrades.trader_id:', offeredtrades.trader_id);
+
       setNewOwner( newOwner= {owner_id: user.id,
                               ownedplant_id: offeredtrades.tradeplant_id,
                               tradeplant_id: offeredtrades.ownedplant_id,
                               trader_id: offeredtrades.owner_id,
                               accepted_trade: true} );
     //dispatch with newOwner as the payload
+    
     console.log('new owner:', newOwner)
     dispatch({type:'EDIT_OWNER', payload: newOwner})
   }

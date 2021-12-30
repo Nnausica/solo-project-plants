@@ -1,0 +1,11 @@
+.tradeItemCard{
+    border-color: #9EF01A !important;
+    max-width: 300px;
+}
+
+.tradeCardsContainer{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }

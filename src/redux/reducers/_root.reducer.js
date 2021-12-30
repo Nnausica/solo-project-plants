@@ -7,7 +7,6 @@ import tradeplants from './tradeplants';
 import tradeplantitem from './tradeplantitem';
 import availability from './availability.reducer';
 import offeredtrades from './offeredtrades.reducer';
-import tradeconfirmitem from './tradeconfirmitem';
 import ownerconfirmitem from './ownerconfirmitem';
 
 // rootReducer is the primary reducer for our entire project
@@ -23,7 +22,6 @@ const rootReducer = combineReducers({
   ownerconfirmitem,
   plants,
   plantItem,
-  tradeconfirmitem,
   tradeplants,
   tradeplantitem,
   availability

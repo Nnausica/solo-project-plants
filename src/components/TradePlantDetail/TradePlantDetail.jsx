@@ -3,7 +3,8 @@ import {useSelector} from 'react-redux';
 import { Link } from 'react-router-dom'; 
 import OfferATradeButton from '../OfferATradeButton/OfferATradeButton';
 import Card from 'react-bootstrap/Card';
-import "../TradePlantDetail/TradePlantDetail.css"
+import '../TradePlantDetail/TradePlantDetail.css'
+import Container from 'react-bootstrap/Container'
 
 
 
@@ -22,14 +23,16 @@ function TradePlantDetail(props) {
       <h2 className="header">{heading}</h2>
     
      {/* <p>{JSON.stringify(tradeplantitem)}</p> */}
-      <Card className="tradePlantDetailCard">
+    <Container className="tradePlantDetailCard">
+      <Card >
         <Card.Body>
-          <img src={tradeplantitem.photo}/> 
+          <img className="cardPic" src={tradeplantitem.photo}/> 
           <Card.Title><p>{tradeplantitem.name}</p></Card.Title>
           <Card.Text><p>{tradeplantitem.description}</p></Card.Text>
         </Card.Body>
       </Card>
       <OfferATradeButton/>
+      </Container>
 
     
       <Link to="/PlantsForTrade"><button>Back to Plants for Trade</button></Link>
