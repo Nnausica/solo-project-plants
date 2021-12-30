@@ -14,7 +14,7 @@ function TradesToConfirm(props) {
     const user = useSelector((store)=> store.user);
     const offeredtrades = useSelector((store)=> store.offeredtrades);
 
-  const [heading, setHeading] = useState('Trades: Confirm or Pass');
+  const [heading, setHeading] = useState('');
 
   useEffect(()=>{ 
     //send my user id to filter get request in saga
@@ -24,7 +24,7 @@ function TradesToConfirm(props) {
   return (
     <div>
       <h2>{heading}</h2>
-      <p>{JSON.stringify(offeredtrades)}</p>
+      {/* <p>{JSON.stringify(offeredtrades)}</p> */}
 
       {offeredtrades.map(( offeredtrade, index )=>( <TradeItemToConfirm offeredtrade={ offeredtrade } index={index}/> ) )}
  

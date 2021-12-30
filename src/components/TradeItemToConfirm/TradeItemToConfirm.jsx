@@ -18,7 +18,7 @@ function TradeItemToConfirm(props) {
   // const tradeconfirmitem = useSelector((store)=>store.tradeconfirmitem)
   // const ownerconfirmitem = useSelector((store)=>store.ownerconfirmitem)
 
-  const [heading, setHeading] = useState('Individual Trades');
+  const [heading, setHeading] = useState('Offered Trade: Confirm or Pass');
 
   return (
     <div>
@@ -29,7 +29,7 @@ function TradeItemToConfirm(props) {
       <Container className="tradeCardsContainer">
       <div>
       <Card className="tradeItemCard">
-      <p>Plant I Own</p>
+      <Card.Title><p>Plant I Own</p></Card.Title>
       <img src={props.offeredtrade.ownedPlant.photo}/>
       <p>{props.offeredtrade.ownedPlant.plant_name}</p>
       <p>{props.offeredtrade.ownedPlant.description}</p>
@@ -38,7 +38,7 @@ function TradeItemToConfirm(props) {
      
       <div>
       <Card className="tradeItemCard">
-      <p>Plant being offered to me in a trade</p>
+      <Card.Title><p>Plant being offered to me in a trade</p></Card.Title>
       <img src={props.offeredtrade.tradePlant.photo}/>
       <p>{props.offeredtrade.tradePlant.plant_name}</p>
       <p>{props.offeredtrade.tradePlant.description}</p>
