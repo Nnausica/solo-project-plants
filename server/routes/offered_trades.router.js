@@ -71,7 +71,7 @@ router.put('/', (req, res) => {
 // UPDATE route for Accepted Trades
 
 router.put('/accepted/:id', (req, res) => {
-  console.log('in acceptedTrade Edit:', req.params.id);
+  console.log('in acceptedTrade Edit:', req.body);
   const editOwnerQuery = `UPDATE offered_trades SET accepted_trade=true WHERE offered_trades.id=${req.params.id};`
   pool.query( editOwnerQuery).then( ()=>{
     res.sendStatus( 200);
