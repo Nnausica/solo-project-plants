@@ -19,7 +19,7 @@ function ConfirmTradeButton(props) {
   const changeOwnerUser = () => {
 
     dispatch({type:'EDIT_OWNER', payload:{owner_id: user.id,
-                                      ownedplant_id: props.offeredtrade.tradeplant_id} })
+                                      ownedplant_id: props.offeredtrade.tradeplant_id}})
     changeOwnerTrader();
   }
 
@@ -28,7 +28,17 @@ function ConfirmTradeButton(props) {
  
     dispatch({type:'EDIT_OWNER', payload:{owner_id:props.offeredtrade.trader_id,
       ownedplant_id: props.offeredtrade.ownedPlant.id}})
+
+      changeAcceptedTrade()
   }
+
+  const changeAcceptedTrade = () => {
+    //updates available trade status
+
+   dispatch({type:'EDIT_ACCEPTED_TRADE', payload: props.offeredtrade.id})
+ }
+
+
 
   return (
     <div>

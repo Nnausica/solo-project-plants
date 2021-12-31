@@ -10,6 +10,7 @@ import OfferTradeSaga from './offertrade.saga';
 import getTradesSaga from './getTrades.saga';
 import editOwnerSaga from './editOwner.saga';
 import passTradeSaga from './passTrade.saga';
+import editAcceptedTradeSaga from './editAcceptedTrade.saga';
 
 
 
@@ -25,6 +26,7 @@ export default function* rootSaga() {
   yield all([
     loginSaga(), // login saga is now registered
     addplantSaga(),
+    editAcceptedTradeSaga(),
     editavailabilitySaga(),
     editOwnerSaga(),
     getTradesSaga(),

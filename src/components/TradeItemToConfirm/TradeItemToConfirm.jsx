@@ -24,7 +24,7 @@ function TradeItemToConfirm(props) {
   return (
     <div>
       <h2 className="header" >{heading}</h2>
-      {/* <p>{JSON.stringify(props)}</p> */}
+      <p>{JSON.stringify(props)}</p>
 
       
       <Container className="tradeCardsContainer">

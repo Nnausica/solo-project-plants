@@ -68,6 +68,19 @@ router.put('/', (req, res) => {
   })
 });
 
+// UPDATE route for Accepted Trades
+
+router.put('/accepted/:id', (req, res) => {
+  console.log('in acceptedTrade Edit:', req.params.id);
+  const editOwnerQuery = `UPDATE offered_trades SET accepted_trade=true WHERE offered_trades.id=${req.params.id};`
+  pool.query( editOwnerQuery).then( ()=>{
+    res.sendStatus( 200);
+  }).catch( (err)=>{
+    console.log( err);
+    res.send( 500);
+  })
+});
+
 /*** DELETE route ***/
 router.delete('/:id', (req, res) => {
   console.log('in delete route on server:', req.params);
