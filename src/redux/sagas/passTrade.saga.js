@@ -6,15 +6,15 @@ import { put, takeLatest } from 'redux-saga/effects';
 //takes trade plants, switches user ID's for owner and trader
 //posts new info to the database
   function* deleteTrade(action){
-    console.log('in pass trade saga, payload is:', action.payload)
+    console.log('in pass trade saga, payload is:', action.payload, action.user)
     try { 
-      const response = yield axios.delete('/api/offered_trades', action.payload);
+      const response = yield axios.delete(`/api/offered_trades/${action.payload}`);
 
       console.log('got past delete request');
       
       yield put( {
         type: 'FETCH_CONFIRMS', 
-        payload: action.payload.user.id});
+        payload: action.user.id});
       
     } catch{
       console.log('put PASSTRADE plants error');

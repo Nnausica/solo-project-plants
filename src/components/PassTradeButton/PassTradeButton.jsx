@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from 'react-router-dom'; 
 
 
 function PassTradeButton(props) {
@@ -13,7 +14,7 @@ function PassTradeButton(props) {
 
   const changeTrade = () => {
 
-    dispatch({type:'PASS_TRADE', payload: props.offeredtrade.id})
+    dispatch({type:'PASS_TRADE', payload: props.offeredtrade.id, user:user})
 
   }
 
