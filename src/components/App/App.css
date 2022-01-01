@@ -141,4 +141,11 @@ text-align: center;
   max-width: 200px;
 }
 
+.largePlantCard{
+  border-color: #9EF01A !important;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 

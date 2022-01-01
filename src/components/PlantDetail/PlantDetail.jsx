@@ -5,6 +5,8 @@ import MakeAvailable from '../MakeAvailable/MakeAvailable';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
+import "../PlantDetail/PlantDetail.css";
+
 
 
 function PlantDetail(props) {
@@ -18,20 +20,22 @@ function PlantDetail(props) {
 
 
   return (
-    <div>
+    <div className="pageContainer">
       <h2>{heading}</h2>
 
       {/* <p>{JSON.stringify(plantItem)}</p> */}
 
-      <p>{plantItem.name} Details</p>
-      <Card>
-      <img src={plantItem.photo}/>
-      <p>{plantItem.name}</p>
-      <p>{plantItem.description}</p>
-      <MakeAvailable/>
+      <h3>{plantItem.name} Details</h3>
+      <Card className="largePlantCard">
+        <Card.Body>
+          <img src={plantItem.photo}/>
+          <Card.Title><p>{plantItem.name}</p></Card.Title>
+          <Card.Text><p>{plantItem.description}</p></Card.Text>
+          <MakeAvailable/>
+        </Card.Body>
       </Card>
     
-      <Link to="/plant"><button className="primaryButton" >Back to My PLants</button></Link>
+      <Link to="/plant"><button className="primaryButton" >Back to My Plants</button></Link>
     </div>
   );
 }
