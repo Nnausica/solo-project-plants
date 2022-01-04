@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/:id', (req, res) => {
   // GET route code here
-  const query = `SELECT * FROM "offered_trades" WHERE owner_id=${req.params.id};`
+  const query = `SELECT * FROM "offered_trades" WHERE owner_id=${req.params.id} AND WHERE accepted_trade=false;`
   pool.query( query )
   .then((results) =>{
     let objectToSend = [];

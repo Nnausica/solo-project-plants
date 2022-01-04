@@ -28,13 +28,13 @@ function PlantDetail(props) {
       <h3>{plantItem.name} Details</h3>
       <Card className="largePlantCard">
         <Card.Body>
-          <img src={plantItem.photo}/>
+          <img src={plantItem.photo} />
           <Card.Title><p>{plantItem.name}</p></Card.Title>
           <Card.Text><p>{plantItem.description}</p></Card.Text>
-          <MakeAvailable/>
+          <MakeAvailable />
         </Card.Body>
       </Card>
-    
+
       <Link to="/plant"><button className="primaryButton" >Back to My Plants</button></Link>
     </div>
   );

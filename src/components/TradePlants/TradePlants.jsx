@@ -29,12 +29,12 @@ const EditPlant = () => {
 
   return (
     <div>
-              <select onChange={(event)=>changeAvailability(event)}>
-                <option value="True">Yes</option>
-                <option value="False">No</option>
-              </select>
-          <button onClick={EditPlant}>Confirm Trade</button>
-          <p>{JSON.stringify(plantItem)}</p>
+      <select onChange={(event) => changeAvailability(event)}>
+        <option value="True">Yes</option>
+        <option value="False">No</option>
+      </select>
+      <button onClick={EditPlant}>Confirm Trade</button>
+      <p>{JSON.stringify(plantItem)}</p>
     </div>
   )
 }
