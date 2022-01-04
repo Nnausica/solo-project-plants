@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from 'react-router-dom'; 
 
 
 // Basic functional component structure for React with default state
@@ -39,10 +40,9 @@ function ConfirmTradeButton(props) {
  }
 
 
-
   return (
     <div>
-          <button className="primaryButton" onClick={changeOwnerUser}>Confirm Trade</button>
+          <Link to="/plant" ><button className="primaryButton" onClick={changeOwnerUser}>Confirm Trade</button></Link>
     </div>
   )
 }
