@@ -35,7 +35,7 @@ function TradePlantDetail(props) {
       </Container>
 
     
-      <Link to="/PlantsForTrade"><button>Back to Plants for Trade</button></Link>
+      <Link to="/PlantsForTrade"><button className="primaryButton" >Back to Plants for Trade</button></Link>
     </div>
   );
 }

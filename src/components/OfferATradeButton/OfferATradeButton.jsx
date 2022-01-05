@@ -29,12 +29,12 @@ function OfferATradeButton(props) {
         <span>
             {/* <p>This will be the list of user plants</p> */}
             <UserPlantsforTrades/>
-            <Link to="/PlantsForTrade"><button onClick={toggleOfferTrade}>JK Dont want to trade</button> </Link>
+            <Link to="/PlantsForTrade"><button className="primaryButton" onClick={toggleOfferTrade}>JK Dont want to trade</button> </Link>
         </span>
         :
         //if OfferTrade is false show nothing....
         <span>
-            <button onClick={toggleOfferTrade}>Offer a Trade</button>
+            <button className="primaryButton" onClick={toggleOfferTrade}>Offer a Trade</button>
         </span>
       
       }

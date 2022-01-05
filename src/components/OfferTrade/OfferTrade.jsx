@@ -35,7 +35,7 @@ function OfferTrade(props) {
   return (
     <div>
       {/* <p>{JSON.stringify(props)}</p> */}
-      <Link to="/PlantsForTrade"><button onClick={OfferTrade}>Offer A Trade</button></Link>
+      <Link to="/PlantsForTrade"><button className="primaryButton" onClick={OfferTrade}>Offer A Trade</button></Link>
     </div>
   )
 }

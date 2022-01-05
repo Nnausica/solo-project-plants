@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom'; 
+import Button from 'react-bootstrap/Button';
 
 // Basic functional component structure for React with default state
 // value setup. When making a new component be sure to replace the
@@ -70,7 +72,7 @@ const AddNewPlant = () => {
     <option value="False">No</option>
     </select>
     
-    <button onClick={AddNewPlant}>Add A New Plant</button>
+    <Link to="/plant"><button className="primaryButton" onClick={AddNewPlant}>Add A New Plant</button></Link>
 
     </div>
   );

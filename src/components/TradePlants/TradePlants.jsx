@@ -33,7 +33,7 @@ const EditPlant = () => {
         <option value="True">Yes</option>
         <option value="False">No</option>
       </select>
-      <button onClick={EditPlant}>Confirm Trade</button>
+      <button className="primaryButton" onClick={EditPlant}>Confirm Trade</button>
       <p>{JSON.stringify(plantItem)}</p>
     </div>
   )
