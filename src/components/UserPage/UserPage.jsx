@@ -7,9 +7,14 @@ function UserPage() {
   const user = useSelector((store) => store.user);
   return (
     <div className="container">
-      <h2>Welcome, {user.username}!</h2>
-      <p>Your ID is: {user.id}</p>
-      <LogOutButton className="btn" />
+      <center>
+      <container className="logocontainer">
+        <img style={{'max-width': '30%'}} component="img" src="/images/floraXchangeLogo.png"/>
+        <h2>Welcome to FloraXchange, {user.username}!</h2>
+        <p>Your ID is: {user.id}</p>
+      
+      </container>
+      </center>
     </div>
   );
 }

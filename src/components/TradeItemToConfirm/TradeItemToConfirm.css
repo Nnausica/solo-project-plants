@@ -1,6 +1,6 @@
 .tradeItemCard{
     border-color: #9EF01A !important;
-    max-width: 300px;
+    max-width: 200px;
     text-align: center;
 }
 
@@ -8,5 +8,10 @@
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .TCPButtons{
+    justify-content: center;
   }

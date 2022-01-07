@@ -8,6 +8,11 @@ import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import '../TradeItemToConfirm/TradeItemToConfirm.css';
 import PassTradeButton from '../PassTradeButton/PassTradeButton';
+import CardGroup from 'react-bootstrap/CardGroup';
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col';
+
+
 
 
 function TradeItemToConfirm(props) {
@@ -26,9 +31,10 @@ function TradeItemToConfirm(props) {
       <h2 className="header" >{heading}</h2>
       {/* <p>{JSON.stringify(props)}</p> */}
 
-      
+      <Row>
       <Container className="tradeCardsContainer">
-      <div>
+      
+      <div class="card h-100">
       <Card className="tradeItemCard">
       <Card.Title><p>Plant I Own</p></Card.Title>
       <img src={props.offeredtrade.ownedPlant.photo}/>
@@ -37,7 +43,7 @@ function TradeItemToConfirm(props) {
       </Card>
       </div>
      
-      <div>
+      <div class="card h-100">
       <Card className="tradeItemCard">
       <Card.Title><p>Plant being offered to me in a trade</p></Card.Title>
       <img src={props.offeredtrade.tradePlant.photo}/>
@@ -45,10 +51,13 @@ function TradeItemToConfirm(props) {
       <p>{props.offeredtrade.tradePlant.description}</p>
       </Card>
       </div>
-
-      <ConfirmTradeButton  offeredtrade= {props.offeredtrade}/>
-      <PassTradeButton offeredtrade= {props.offeredtrade}/>
       </Container>
+      </Row>
+
+    <center style={{'margin-left':"590px"}}>
+            <ConfirmTradeButton className="TCPButtons" offeredtrade= {props.offeredtrade}/>
+            <PassTradeButton className="TCPButtons" offeredtrade= {props.offeredtrade}/>
+            </center>
      
      </div>
   ); //end return

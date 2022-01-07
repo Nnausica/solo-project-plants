@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom'; 
 import UserPlantsforTrades from '../UserPlantsforTrades/UserPlantsforTrades';
+import Button from 'react-bootstrap/Button';
 
 
 
@@ -29,12 +30,12 @@ function OfferATradeButton(props) {
         <span>
             {/* <p>This will be the list of user plants</p> */}
             <UserPlantsforTrades/>
-            <Link to="/PlantsForTrade"><button className="primaryButton" onClick={toggleOfferTrade}>JK Dont want to trade</button> </Link>
+            <Link to="/PlantsForTrade"><Button className="primaryButton" onClick={toggleOfferTrade}>JK Dont want to trade</Button> </Link>
         </span>
         :
         //if OfferTrade is false show nothing....
         <span>
-            <button className="primaryButton" onClick={toggleOfferTrade}>Offer a Trade</button>
+            <Button className="primaryButton" onClick={toggleOfferTrade}>Offer a Trade</Button>
         </span>
       
       }

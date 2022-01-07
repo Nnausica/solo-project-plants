@@ -38,6 +38,7 @@ Button
   font-size: 1.1rem;
   outline: 0;
   cursor: pointer;
+  float: left;
 }
 
 .btn_sizeMin {
@@ -123,6 +124,7 @@ text-align: center;
 .primaryButton{
   border-color: #9EF01A !important;
   background-color: #008000 !important;
+  max-width: 200px;
 }
 .primaryButton:hover{
   border-color: #9EF01A !important;
@@ -134,11 +136,12 @@ text-align: center;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .plantCard{
   border-color: #9EF01A !important;
-  max-width: 200px;
+  max-width: 300px;
 }
 
 .largePlantCard{

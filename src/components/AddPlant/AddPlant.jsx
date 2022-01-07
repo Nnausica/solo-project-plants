@@ -58,11 +58,15 @@ const AddNewPlant = () => {
     <div>
 
       <h2>{heading}</h2>
-      <h1>AddPlant</h1>
+       
             <input type="text" placeholder="Plant Name" onChange={(event)=>changeName(event)}></input>
             <input type="text" placeholder="Plant Description" onChange={(event)=>changeDescription(event)}></input>
+          
+
+            <p>
             <input type="text" placeholder="Plant Photo" onChange={(event)=>changePhoto(event)}></input>
-    
+            </p>
+            
         <p>Is your plant available for trade?</p>
 
 <label for="Available">Available for Trade?:</label>

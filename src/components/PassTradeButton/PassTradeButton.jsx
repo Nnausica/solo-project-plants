@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom'; 
+import Button from 'react-bootstrap/Button';
 
 
 function PassTradeButton(props) {
@@ -20,7 +21,7 @@ function PassTradeButton(props) {
 
   return (
     <div>
-      <button className="primaryButton" onClick={changeTrade}>Pass on Trade</button>
+      <Button className="primaryButton" onClick={changeTrade}>Pass on Trade</Button>
     </div>
   )
 }

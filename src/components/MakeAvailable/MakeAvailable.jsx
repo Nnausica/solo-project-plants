@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
+import Button from 'react-bootstrap/Button';
 
 // Basic functional component structure for React with default state
 // value setup. When making a new component be sure to replace the
@@ -33,7 +34,7 @@ const EditPlant = () => {
                 <option value="True">Yes</option>
                 <option value="False">No</option>
               </select>
-          <button onClick={EditPlant}>Make Availabile</button>
+          <Button onClick={EditPlant}>Make Availabile</Button>
           {/* <p>{JSON.stringify(plantItem)}</p> */}
     </div>
   )

@@ -9,6 +9,8 @@ import "../PlantDetail/PlantDetail.css";
 
 
 
+
+
 function PlantDetail(props) {
 
   const store = useSelector((store) => store);
@@ -34,8 +36,9 @@ function PlantDetail(props) {
           <MakeAvailable />
         </Card.Body>
       </Card>
-
-      <Link to="/plant"><button className="primaryButton" >Back to My Plants</button></Link>
+      <center style={{'margin-left':"640px"}}>
+      <Link to="/plant"><Button className="primaryButton" >Back to My Plants</Button></Link>
+      </center>
     </div>
   );
 }

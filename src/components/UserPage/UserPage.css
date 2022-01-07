@@ -1,0 +1,8 @@
+.logocontainer{
+    display:flex;
+    justify-content: center;
+}
+
+.userlogo{
+    width: 30px;
+}

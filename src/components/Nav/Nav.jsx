@@ -29,10 +29,6 @@ function Nav() {
               Home
             </Link>
 
-            <Link className="navLink" to="/info">
-              Info Page
-            </Link>
-
             {/* to= has to match the path laid out in app.js */}
             <Link className="navLink" to="/plant">
               My Plants

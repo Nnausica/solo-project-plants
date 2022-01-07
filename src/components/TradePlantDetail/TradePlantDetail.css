@@ -1,7 +1,22 @@
-.tradePlantDetailCard{
-    max-width: 80% px;
-}
+/* .tradePlantDetailCard{
+    border-color: #9EF01A !important;
+    max-width: 50%;
+    text-align: center;
+} */
 
-.cardPic{
+/* .cardPic{
     align-items: center;
-}
+
+} */
+
+.pftButton{
+    border-color: #9EF01A !important;
+    background-color: #008000 !important;
+    max-width: 200px;
+    align-content: center;
+  }
+
+  .pftButton:hover{
+    border-color: #9EF01A !important;
+    background-color: #003D1E !important;
+  }
