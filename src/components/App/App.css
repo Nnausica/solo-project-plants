@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 html,
 body,
 #react-root {
@@ -6,7 +7,7 @@ body,
 
 body {
   background-color: #F5FFD6 !important;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Julius Sans One" !important;
   margin: 0px;
 }
 

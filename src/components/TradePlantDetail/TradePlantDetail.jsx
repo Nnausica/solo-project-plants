@@ -36,7 +36,7 @@ function TradePlantDetail(props) {
 
       <center style={{'margin-left':"560px"}}>
       <OfferATradeButton/>
-      <Link to="/PlantsForTrade"><Button className="primaryButton" >Back to Plants for Trade</Button></Link>
+      <Link to="/PlantsForTrade"><Button className="primaryButton" >Back to Trades</Button></Link>
       </center>
     </div>
   );

@@ -11,7 +11,8 @@ function Nav() {
   return (
     <div className="nav">
       <Link to="/home">
-        <h2 className="nav-title">FloraXchange</h2>
+        {/* <h2 className="nav-title">FloraXchange</h2> */}
+        <img style={{'max-width': '100px'}} component="img" src="/images/floraXchangeLogo.png"/>
       </Link>
       <div>
         {/* If no user is logged in, show these links */}
