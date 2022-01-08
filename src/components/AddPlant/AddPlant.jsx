@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'; 
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import "../AddPlant/AddPlant.css";
 
 // Basic functional component structure for React with default state
 // value setup. When making a new component be sure to replace the
@@ -56,9 +58,13 @@ const AddNewPlant = () => {
 
   return (
     <div>
-
+    <center>
       <h2>{heading}</h2>
-       
+      
+      <Container className="addPlantDiv">
+        <div>
+         
+
             <input type="text" placeholder="Plant Name" onChange={(event)=>changeName(event)}></input>
             <input type="text" placeholder="Plant Description" onChange={(event)=>changeDescription(event)}></input>
           
@@ -66,17 +72,25 @@ const AddNewPlant = () => {
             <p>
             <input type="text" placeholder="Plant Photo" onChange={(event)=>changePhoto(event)}></input>
             </p>
-            
-        <p>Is your plant available for trade?</p>
+                    
+            <p>Is your plant available for trade?</p>
 
-<label for="Available">Available for Trade?:</label>
+            <label for="Available">Available for Trade?:</label>
+            <div>
+              <select onChange={(event)=>changeAvailability(event)}>
+              <option value="True">Yes</option>
+              <option value="False">No</option>
+              </select>
+            </div>
+            <div>
+              <Link to="/plant"><Button className="primaryButton" onClick={AddNewPlant}>Add A New Plant</Button></Link>
+            </div>
 
-    <select onChange={(event)=>changeAvailability(event)}>
-    <option value="True">Yes</option>
-    <option value="False">No</option>
-    </select>
-    
-    <Link to="/plant"><button className="primaryButton" onClick={AddNewPlant}>Add A New Plant</button></Link>
+      </div>    
+    </Container>
+    </center>
+
+     
 
     </div>
   );

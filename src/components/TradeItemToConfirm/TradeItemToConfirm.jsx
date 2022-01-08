@@ -24,12 +24,11 @@ function TradeItemToConfirm(props) {
   // const tradeconfirmitem = useSelector((store)=>store.tradeconfirmitem)
   // const ownerconfirmitem = useSelector((store)=>store.ownerconfirmitem)
 
-  const [heading, setHeading] = useState('Offered Trade: Confirm or Pass');
+  const [heading, setHeading] = useState('');
 
   return (
     <div>
-      <h2 className="header" >{heading}</h2>
-      {/* <p>{JSON.stringify(props)}</p> */}
+      <h1 className="header" >{heading}</h1>
 
       <Row>
       <Container className="tradeCardsContainer">
@@ -37,7 +36,7 @@ function TradeItemToConfirm(props) {
       <div class="card h-100">
       <Card className="tradeItemCard">
       <Card.Title><p>Plant I Own</p></Card.Title>
-      <img src={props.offeredtrade.ownedPlant.photo}/>
+      <Card.Img className="cardImage" src={props.offeredtrade.ownedPlant.photo}/>
       <p>{props.offeredtrade.ownedPlant.plant_name}</p>
       <p>{props.offeredtrade.ownedPlant.description}</p>
       </Card>
@@ -45,8 +44,8 @@ function TradeItemToConfirm(props) {
      
       <div class="card h-100">
       <Card className="tradeItemCard">
-      <Card.Title><p>Plant being offered to me in a trade</p></Card.Title>
-      <img src={props.offeredtrade.tradePlant.photo}/>
+      <Card.Title><p>Offered Trade</p></Card.Title>
+      <Card.Img className="cardImage" src={props.offeredtrade.tradePlant.photo}/>
       <p>{props.offeredtrade.tradePlant.plant_name}</p>
       <p>{props.offeredtrade.tradePlant.description}</p>
       </Card>
@@ -54,10 +53,14 @@ function TradeItemToConfirm(props) {
       </Container>
       </Row>
 
-    <center style={{'margin-left':"590px"}}>
+      <div className="TCPButtons">
+        <div>
             <ConfirmTradeButton className="TCPButtons" offeredtrade= {props.offeredtrade}/>
+        </div>
+        <div>
             <PassTradeButton className="TCPButtons" offeredtrade= {props.offeredtrade}/>
-            </center>
+        </div>
+     </div>
      
      </div>
   ); //end return

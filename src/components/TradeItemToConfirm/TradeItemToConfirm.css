@@ -2,6 +2,7 @@
     border-color: #9EF01A !important;
     max-width: 200px;
     text-align: center;
+    height: 400px;
 }
 
 .tradeCardsContainer{
@@ -10,8 +11,17 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
+    
   }
 
   .TCPButtons{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .cardImage{
+    height: 300px;
+    width: 250px !important;
+    object-fit: cover;
   }

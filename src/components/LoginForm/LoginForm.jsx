@@ -57,7 +57,9 @@ function LoginForm() {
         </label>
       </div>
       <div>
+      <center style={{'margin-left':"100px"}}>
         <input className="btn" type="submit" name="submit" value="Log In" />
+        </center>
       </div>
     </form>
   );

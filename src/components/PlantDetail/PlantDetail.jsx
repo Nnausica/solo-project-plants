@@ -36,9 +36,9 @@ function PlantDetail(props) {
           <MakeAvailable />
         </Card.Body>
       </Card>
-      <center style={{'margin-left':"640px"}}>
+      
       <Link to="/plant"><Button className="primaryButton" >Back to My Plants</Button></Link>
-      </center>
+      
     </div>
   );
 }

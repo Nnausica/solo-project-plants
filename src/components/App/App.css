@@ -31,15 +31,15 @@ Button
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  border-color: #014041;
+  border-color: #9EF01A !important;
   border-width: 1px 1px 3px;
   border-radius: 4px;
-  background-color: #00acb0;
-  color: #f8f8f8;
+  background-color: #008000 !important;
+  color: #f8f8f8 !important;
   font-size: 1.1rem;
   outline: 0;
   cursor: pointer;
-  float: left;
+  /* float: left; */
 }
 
 .btn_sizeMin {
@@ -58,8 +58,10 @@ Button
 }
 
 .btn:hover {
-  background-color: #008183;
-  text-decoration: none;
+  /* background-color: #008183; */
+  color: white !important;
+  border-color: #9EF01A !important;
+  background-color: #003D1E !important;
 }
 
 /* This line makes the "Register" and "Login" buttons look like links */
@@ -68,15 +70,17 @@ Button
   border-width: 0;
   border-bottom: 1px solid #444;
   border-radius: 0;
-  background: none;
+  /* background: none; */
   font: inherit;
-  color: #444;
+  /* color: #444; */
+  border-color: #9EF01A !important;
+  background-color: #008000 !important;
+  max-width: 200px;
 }
 
 .btn_asLink:hover {
-  background-color: transparent;
-  border-color: #008183;
-  color: #008183;
+  border-color: #9EF01A !important;
+  background-color: #003D1E !important;
 }
 
 /* --------------------------------------------------------------------------------
@@ -102,11 +106,12 @@ Form Treatment
   box-sizing: border-box;
   width: 400px;
   max-width: 100%;
-  padding: 25px;
+  padding: 50px;
   margin: 0 auto 20px;
   background-color: #efefef;
   border-radius: 3px;
   box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
+  text-align: center;
 }
 
 input {
@@ -120,12 +125,16 @@ _____________________________________________________________________________*/
 
 .header{
 text-align: center;
+font-size: 33px;
+margin-top: 30px;
 }
 
 .primaryButton{
   border-color: #9EF01A !important;
   background-color: #008000 !important;
   max-width: 200px;
+  display: flex;
+  align-items: center;
 }
 .primaryButton:hover{
   border-color: #9EF01A !important;
@@ -140,9 +149,27 @@ text-align: center;
   gap: 10px;
 }
 
+.cardImage{
+  height: 350px;
+  width: 300px !important;
+  object-fit: cover;
+}
+
 .plantCard{
   border-color: #9EF01A !important;
   max-width: 300px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-top: 30px;
+}
+
+.plantName{
+  /* display: block; */
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bolder;
+  padding-top: 20px;
 }
 
 .largePlantCard{
@@ -151,5 +178,7 @@ text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
+
+
 
 

@@ -52,10 +52,12 @@ function UserPlants(props) {
                   <Card className="plantCard"> 
                     {/* <Card.Img variant="top" src={plant.photo}/>    */}
                     <Card.Body>
-                      <img src={plant.photo}/>
-                          <Card.Title><h4>{plant.plant_name} </h4></Card.Title>
+                      <Card.Img className="cardImage" src={plant.photo}/>
+                      <center>
+                          <Card.Title className="plantName">{plant.plant_name}</Card.Title>
                           <Card.Text><p> {plant.description} </p></Card.Text>
                         <Link to="/PlantDetail" ><Button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</Button></Link>
+                        </center>
                     </Card.Body>
                   </Card>  
                 </div>
