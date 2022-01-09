@@ -1,4 +1,7 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
+import "../AboutPage/AboutPage.css";
+
 
 // This is one of our simplest components
 // It doesn't have local state,
@@ -9,7 +12,17 @@ function AboutPage() {
   return (
     <div className="container">
       <div>
-        <p>This about page is for anyone to read!</p>
+        <center>
+        <Card className="AboutCard">
+          <center>
+          <Card.Img className="aboutImg" src="/images/leafOutline.png"/>
+          <Card.Title className="aboutTitle">FloraXchange</Card.Title>
+          <Card.Text className="aboutText"> 
+          FloraXchange is a plant trading app, meant to foster community through trading of plants.
+          </Card.Text>
+          </center>
+        </Card>
+        </center>
       </div>
     </div>
   );

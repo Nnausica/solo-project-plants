@@ -26,7 +26,8 @@ function LoginForm() {
 
   return (
     <form className="formPanel" onSubmit={login}>
-      <h2>Login</h2>
+      <h2><img style={{'max-width': '250px'}} component="img" src="/images/logInButton.png"/>
+      </h2>
       {errors.loginMessage && (
         <h3 className="alert" role="alert">
           {errors.loginMessage}
@@ -57,7 +58,7 @@ function LoginForm() {
         </label>
       </div>
       <div>
-      <center style={{'margin-left':"100px"}}>
+      <center>
         <input className="btn" type="submit" name="submit" value="Log In" />
         </center>
       </div>

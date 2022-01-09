@@ -1,0 +1,24 @@
+.AboutCard{
+    max-width: 400px;
+    justify-content: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-color: #9EF01A !important;
+}
+
+.aboutImg{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.aboutTitle{
+    margin-top: 20px;
+}
+
+.aboutText{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}

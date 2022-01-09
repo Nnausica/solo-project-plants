@@ -39,6 +39,7 @@ Button
   font-size: 1.1rem;
   outline: 0;
   cursor: pointer;
+  margin-top: 10px;
   /* float: left; */
 }
 
@@ -109,14 +110,16 @@ Form Treatment
   padding: 50px;
   margin: 0 auto 20px;
   background-color: #efefef;
+  border-color: #9EF01A !important;
   border-radius: 3px;
   box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
   text-align: center;
 }
 
 input {
-  margin: 5px;
-  margin-bottom: 10px;
+  margin: 10px !important;
+  margin-bottom: 10px ;
+  border-color: #9EF01A !important;
 }
 
 /*----------------------------------------------------------------------------

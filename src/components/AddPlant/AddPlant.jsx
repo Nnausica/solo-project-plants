@@ -78,10 +78,8 @@ const AddNewPlant = () => {
             {/* <label for="Available">Available for Trade?:</label> */}
             
               <DropdownButton onChange={(event)=>changeAvailability(event)} title="Available for Trade?">
-
                 <Dropdown.Item value="True">Yes</Dropdown.Item>
-                <Dropdown.Item value="False">No</Dropdown.Item>
-            
+                <Dropdown.Item value="False">No</Dropdown.Item>            
               </DropdownButton>
             </div>
             <div>

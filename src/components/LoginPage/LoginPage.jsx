@@ -8,9 +8,8 @@ function LoginPage() {
 
   return (
     <div>
-      <LoginForm />
-
-      <center style={{'margin-left':"670px"}}>
+      <LoginForm/>
+      <center>
         <Button
           type="button"
           className="btn_asLink"
@@ -18,9 +17,10 @@ function LoginPage() {
             history.push('/registration');
           }}
         >
+          
           Register
         </Button>
-      </center>
+      </center>  
     </div>
   );
 }
