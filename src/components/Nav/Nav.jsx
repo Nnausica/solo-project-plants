@@ -27,32 +27,38 @@ function Nav() {
         {user.id && (
           <>
             <Link className="navLink" to="/user">
-              Home
+            <img style={{'max-width': '80px'}} component="img" src="/images/homeButton.png"/>
+              {/* Home */}
             </Link>
 
             {/* to= has to match the path laid out in app.js */}
             <Link className="navLink" to="/plant">
-              My Plants
+            <img style={{'max-width': '125px'}} component="img" src="/images/myPlantsButton.png"/>
+              {/* My Plants */}
             </Link>
 
             <Link className="navLink" to="/AddPlant">
-              Add A Plant
+            <img style={{'max-width': '150px'}} component="img" src="/images/addPlantButton.png"/>
+              {/* Add A Plant */}
             </Link>
 
             <Link className="navLink" to="/PlantsForTrade">
-              Plants for Trade
+            <img style={{'max-width': '210px'}} component="img" src="/images/plantsForTradeButton.png"/>
+              {/* Plants for Trade */}
             </Link>
 
             <Link className="navLink" to="/TradesToConfirm">
-              Trades to Confirm
+            <img style={{'max-width': '225px'}} component="img" src="/images/tradesToConfirmButton.png"/>
+              {/* Trades to Confirm */}
             </Link>
 
-            <LogOutButton className="navLink" />
+            <LogOutButton className="navLink"/>
           </>
         )}
 
         <Link className="navLink" to="/about">
-          About
+        <img style={{'max-width': '85px'}} component="img" src="/images/aboutButton.png"/>
+          {/* About */}
         </Link>
       </div>
     </div>
