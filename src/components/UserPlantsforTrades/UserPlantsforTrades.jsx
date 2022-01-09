@@ -36,9 +36,11 @@ function UserPlantsforTrades(props) {
                <div>
                     <Card className="plantCard">
                       <Card.Body>
-                        <img src={plant.photo}/>         
-                        <Card.Title><h3>{plant.plant_name} </h3></Card.Title>
-                        <Card.Text><p> {plant.description} </p></Card.Text>
+                        <Card.Img className="cardImage" src={plant.photo}/>    
+                        <center>    
+                          <Card.Title className="plantName"><h3>{plant.plant_name} </h3></Card.Title>
+                          <Card.Text>{plant.description}</Card.Text>
+                          </center> 
                         <OfferTrade plant={plant}/>
                       </Card.Body>
                     </Card>  

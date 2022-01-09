@@ -50,10 +50,13 @@ function PlantsForTrade(props) {
             <div>
                 <Card className="plantCard">
                   <Card.Body>    
-                  <img src={tradeplant.photo}/>      
-                  <Card.Title><h3>{tradeplant.plant_name} </h3></Card.Title>
-                  <Card.Text><p> {tradeplant.description} </p></Card.Text>
-                              <Link to="/TradePlantDetail" ><Button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</Button></Link>
+                  <Card.Img className="cardImage" src={tradeplant.photo}/>    
+                  <center>
+                    <Card.Title className="plantName">{tradeplant.plant_name}</Card.Title>
+                    <Card.Text className="plantDescription">{tradeplant.description}</Card.Text>
+                  
+                    <Link to="/TradePlantDetail" ><Button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</Button></Link>
+                    </center>  
                   </Card.Body>
                 </Card>   
             </div>

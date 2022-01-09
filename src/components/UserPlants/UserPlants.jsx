@@ -57,7 +57,7 @@ function UserPlants(props) {
                           <Card.Title className="plantName">{plant.plant_name}</Card.Title>
                           <Card.Text><p> {plant.description} </p></Card.Text>
                         <Link to="/PlantDetail" ><Button className="primaryButton" onClick={setPlantDetail}>'View Plant Details'</Button></Link>
-                        </center>
+                      </center>
                     </Card.Body>
                   </Card>  
                 </div>

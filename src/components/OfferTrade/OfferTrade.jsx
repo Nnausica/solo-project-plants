@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom'; 
+import Button from 'react-bootstrap/Button';
 
 // Basic functional component structure for React with default state
 // value setup. When making a new component be sure to replace the
@@ -35,7 +36,7 @@ function OfferTrade(props) {
   return (
     <div>
       {/* <p>{JSON.stringify(props)}</p> */}
-      <Link to="/PlantsForTrade"><button className="primaryButton" onClick={OfferTrade}>Offer A Trade</button></Link>
+      <Link to="/PlantsForTrade"><Button className="primaryButton" onClick={OfferTrade}>Offer A Trade</Button></Link>
     </div>
   )
 }

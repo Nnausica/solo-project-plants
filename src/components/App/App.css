@@ -126,7 +126,7 @@ _____________________________________________________________________________*/
 .header{
 text-align: center;
 font-size: 33px;
-margin-top: 30px;
+margin-top: 10px;
 }
 
 .primaryButton{
@@ -135,6 +135,7 @@ margin-top: 30px;
   max-width: 200px;
   display: flex;
   align-items: center;
+  margin-top: 10px;
 }
 .primaryButton:hover{
   border-color: #9EF01A !important;
@@ -159,7 +160,7 @@ margin-top: 30px;
   border-color: #9EF01A !important;
   max-width: 300px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .plantName{
@@ -167,16 +168,27 @@ margin-top: 30px;
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis !important;
+  font-weight: bolder;
+  padding-top: 20px;
+}
+
+.plantDescription{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis !important;
   font-weight: bolder;
   padding-top: 20px;
 }
 
 .largePlantCard{
   border-color: #9EF01A !important;
-  max-width: 400px;
+  max-width: 250px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 

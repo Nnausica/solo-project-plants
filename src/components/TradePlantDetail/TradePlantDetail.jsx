@@ -34,7 +34,7 @@ function TradePlantDetail(props) {
       </Card>
       </Container>
 
-      <center style={{'margin-left':"560px"}}>
+      <center>
       <OfferATradeButton/>
       <Link to="/PlantsForTrade"><Button className="primaryButton" >Back to Trades</Button></Link>
       </center>
