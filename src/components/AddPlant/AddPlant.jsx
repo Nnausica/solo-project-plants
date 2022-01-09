@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import "../AddPlant/AddPlant.css";
+import DropdownButton from 'react-bootstrap/DropdownButton'
+import Dropdown from 'react-bootstrap/Dropdown'
 
 // Basic functional component structure for React with default state
 // value setup. When making a new component be sure to replace the
@@ -62,12 +64,9 @@ const AddNewPlant = () => {
       <h2>{heading}</h2>
       
       <Container className="addPlantDiv">
-        <div>
-         
-
+        <div className="colorBox">
             <input type="text" placeholder="Plant Name" onChange={(event)=>changeName(event)}></input>
             <input type="text" placeholder="Plant Description" onChange={(event)=>changeDescription(event)}></input>
-          
 
             <p>
             <input type="text" placeholder="Plant Photo" onChange={(event)=>changePhoto(event)}></input>
@@ -75,12 +74,15 @@ const AddNewPlant = () => {
                     
             <p>Is your plant available for trade?</p>
 
-            <label for="Available">Available for Trade?:</label>
             <div>
-              <select onChange={(event)=>changeAvailability(event)}>
-              <option value="True">Yes</option>
-              <option value="False">No</option>
-              </select>
+            {/* <label for="Available">Available for Trade?:</label> */}
+            
+              <DropdownButton onChange={(event)=>changeAvailability(event)} title="Available for Trade?">
+
+                <Dropdown.Item value="True">Yes</Dropdown.Item>
+                <Dropdown.Item value="False">No</Dropdown.Item>
+            
+              </DropdownButton>
             </div>
             <div>
               <Link to="/plant"><Button className="primaryButton" onClick={AddNewPlant}>Add A New Plant</Button></Link>

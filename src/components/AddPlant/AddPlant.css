@@ -1,8 +1,14 @@
 .addPlantDiv{
-    background-color: #70E000 !important;
-    margin-left: 150px;
-    margin-right: 150px;
+    background-color: #90be6d !important;
+    margin-left: 250px;
+    margin-right: 250px;
+    border-color: #9EF01A !important;
   }
+
+/* .colorBox{
+  margin-left: 250px;
+  margin-right: 250px;
+} */
 /* 
   .style{{
     'background-color': '70E000 !important';
