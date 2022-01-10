@@ -19,9 +19,9 @@ function LandingPage() {
      
       <div component="img" src="/images/floraXchangeLogo.png"/>
 
-
-      <h2>{heading}</h2>
-
+      <center>
+       <h2>{heading}</h2>
+      </center>
       <div> 
        
         <div>
