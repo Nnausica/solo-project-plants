@@ -28,8 +28,10 @@ function TradePlantDetail(props) {
       <Card className="largePlantCard">
         <Card.Body>
           <img src={tradeplantitem.photo}/> 
+          <center>
           <Card.Title><p>{tradeplantitem.name}</p></Card.Title>
           <Card.Text><p>{tradeplantitem.description}</p></Card.Text>
+          </center>
         </Card.Body>
       </Card>
       </Container>
