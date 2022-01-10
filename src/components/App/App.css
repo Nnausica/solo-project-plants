@@ -82,6 +82,7 @@ Button
 .btn_asLink:hover {
   border-color: #9EF01A !important;
   background-color: #003D1E !important;
+  border-radius: 10px !important;
 }
 
 /* --------------------------------------------------------------------------------
@@ -105,12 +106,11 @@ Form Treatment
 
 .formPanel {
   box-sizing: border-box;
-  width: 400px;
+  width: 200px;
   max-width: 100%;
   padding: 50px;
   margin: 0 auto 20px;
-  background-color: #efefef;
-  border-color: #9EF01A !important;
+  background-color: #90be6d;
   border-radius: 3px;
   box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
   text-align: center;
@@ -120,6 +120,7 @@ input {
   margin: 10px !important;
   margin-bottom: 10px ;
   border-color: #9EF01A !important;
+  border-radius: 5px !important;
 }
 
 /*----------------------------------------------------------------------------
