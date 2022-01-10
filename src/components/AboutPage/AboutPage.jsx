@@ -18,7 +18,7 @@ function AboutPage() {
           <Card.Img className="aboutImg" src="/images/leafOutline.png"/>
           <Card.Title className="aboutTitle">FloraXchange</Card.Title>
           <Card.Text className="aboutText"> 
-          FloraXchange is a plant trading app, meant to foster community through trading of plants.
+          FloraXchange is a plant trading app, fostering community through the trading of plants.
           </Card.Text>
           </center>
         </Card>
