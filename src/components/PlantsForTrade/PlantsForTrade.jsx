@@ -7,11 +7,9 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container'
 
-
-
 function PlantsForTrade(props) {
-  // Using hooks we're creating local state for a "heading" variable with
-  // a default value of 'Functional Component'
+  // shows all plants for trade
+
   const dispatch = useDispatch();
   
   const store = useSelector((store) => store);
@@ -19,8 +17,6 @@ function PlantsForTrade(props) {
   const user = useSelector((store)=> store.user);
 
   const [heading, setHeading] = useState('Plants for Trade');
-  
- 
 
   useEffect(()=>{ 
     dispatch({type: 'FETCH_TRADES', payload:user.id})

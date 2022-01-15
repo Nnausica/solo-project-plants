@@ -44,6 +44,7 @@ function AddPlant(props) {
     setnewPhoto(event.target.value);
   }
 
+  // Add a new plant
 const AddNewPlant = () => {
   // package up new Widget in object
   const newPlant = {

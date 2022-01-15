@@ -3,12 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from 'react-router-dom'; 
 import Button from 'react-bootstrap/Button';
 
-// Basic functional component structure for React with default state
-// value setup. When making a new component be sure to replace the
-// component name OfferTrade with the name for the new component.
 function OfferTrade(props) {
-  // Using hooks we're creating local state for a "heading" variable with
-  // a default value of 'Functional Component'
+  // Offer a trade for selected plant
+  
   const store = useSelector((store) => store);
   const tradeplantitem = useSelector((store) => store.tradeplantitem);
   const user = useSelector((store) => store.user);
@@ -19,12 +16,8 @@ function OfferTrade(props) {
   const dispatch = useDispatch();
 
   const OfferTrade = () => {
-  // dispatch with NewPlant as the payload
-  // console.log('trade plant user', tradeplantitem.user_id)
-  // console.log('trade plant id', tradeplantitem.id)
-  // console.log('my user id', user.id)
-  // console.log('my plant id testing', props.plant.id)///id plant in an array plants[0].id
-
+    //dispatches trade info
+    
     dispatch( {type:'FETCH_OFFER_TRADE', payload: { owner_id: tradeplantitem.user_id, 
                                               ownedplant_id: tradeplantitem.id, 
                                               trader_id: user.id, 

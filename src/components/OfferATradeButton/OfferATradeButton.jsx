@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 
 
 function OfferATradeButton(props) {
+  // offer a trade for selected plant
  
   const store = useSelector((store) => store);
   const plantItem = useSelector((store) => store.plantItem);

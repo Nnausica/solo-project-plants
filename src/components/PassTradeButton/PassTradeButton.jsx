@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 
 function PassTradeButton(props) {
+  //reject offered trade and delete from the offered trades table
 
   const store = useSelector((store) => store);
   const user = useSelector((store) => store.user)

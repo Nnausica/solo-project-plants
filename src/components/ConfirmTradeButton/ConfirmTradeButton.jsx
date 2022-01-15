@@ -17,9 +17,9 @@ function ConfirmTradeButton(props) {
   const [heading, setHeading] = useState('');
   const dispatch = useDispatch();
 
+  //changes owner ids on acceptance of an offered trade. 
 
   const changeOwnerUser = () => {
-
     dispatch({type:'EDIT_OWNER', payload:{owner_id: user.id,
                                       ownedplant_id: props.offeredtrade.tradeplant_id}})
     changeOwnerTrader();
@@ -27,16 +27,13 @@ function ConfirmTradeButton(props) {
 
   const changeOwnerTrader = () => {
      //sets trader id as the payload for owners plant 
- 
     dispatch({type:'EDIT_OWNER', payload:{owner_id:props.offeredtrade.trader_id,
       ownedplant_id: props.offeredtrade.ownedPlant.id}})
-
       changeAcceptedTrade()
   }
 
   const changeAcceptedTrade = () => {
     //updates available trade status
-
    dispatch({type:'EDIT_ACCEPTED_TRADE', payload: props.offeredtrade.id})
  }
 

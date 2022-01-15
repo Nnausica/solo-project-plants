@@ -4,12 +4,9 @@ import Button from 'react-bootstrap/Button';
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import Dropdown from 'react-bootstrap/Dropdown'
 
-// Basic functional component structure for React with default state
-// value setup. When making a new component be sure to replace the
-// component name MakeAvailable with the name for the new component.
+
 function MakeAvailable(props) {
-  // Using hooks we're creating local state for a "heading" variable with
-  // a default value of 'Functional Component'
+  // changes the availability for trade of an individual plant. 
   const store = useSelector((store) => store);
   const plantItem = useSelector((store) => store.plantItem);
 

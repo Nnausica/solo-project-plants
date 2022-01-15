@@ -10,8 +10,8 @@ import "../UserPlantsforTrades/UserPlantsforTrades.css";
 
 
 function UserPlantsforTrades(props) {
-  // Using hooks we're creating local state for a "heading" variable with
-  // a default value of 'Functional Component'
+  // Gets user plants for trades, slightly different compnents being mapped.
+  
   const dispatch = useDispatch();
 
   const plants = useSelector((store) => store.plants);

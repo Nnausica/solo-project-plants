@@ -7,8 +7,8 @@ import TradeItemToConfirm from '../TradeItemToConfirm/TradeItemToConfirm';
 
 
 function TradesToConfirm(props) {
-  // Using hooks we're creating local state for a "heading" variable with
-  // a default value of 'Functional Component'
+  //confirm trades offered to user
+  
   const dispatch = useDispatch();
     const store = useSelector((store)=> store.store);
     const user = useSelector((store)=> store.user);

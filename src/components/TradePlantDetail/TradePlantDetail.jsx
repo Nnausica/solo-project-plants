@@ -10,14 +10,13 @@ import Button from 'react-bootstrap/Button';
 
 
 function TradePlantDetail(props) {
+  // shows the details of selected plant availabel for trade
 
   const store = useSelector((store) => store);
   const tradeplantitem = useSelector((store) => store.tradeplantitem);
   const plantItem = useSelector((store) => store.plantItem);
 
   const [heading, setHeading] = useState('Plant for Trade Details');
-
-
 
   return (
     <div>

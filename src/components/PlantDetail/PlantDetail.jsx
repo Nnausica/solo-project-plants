@@ -8,18 +8,13 @@ import Container from 'react-bootstrap/Container';
 import "../PlantDetail/PlantDetail.css";
 
 
-
-
-
 function PlantDetail(props) {
+  //shows selected plant details
 
   const store = useSelector((store) => store);
   const plantItem = useSelector((store) => store.plantItem);
 
-
   const [heading, setHeading] = useState('');
-
-
 
   return (
     <div className="pageContainer">

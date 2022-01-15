@@ -13,16 +13,11 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col';
 
 
-
-
 function TradeItemToConfirm(props) {
-  // Using hooks we're creating local state for a "heading" variable with
-  // a default value of 'Functional Component'
+  // this will show all offered trades to user
   const dispatch = useDispatch();
 
   const user = useSelector((store)=> store.user);
-  // const tradeconfirmitem = useSelector((store)=>store.tradeconfirmitem)
-  // const ownerconfirmitem = useSelector((store)=>store.ownerconfirmitem)
 
   const [heading, setHeading] = useState('');
 
